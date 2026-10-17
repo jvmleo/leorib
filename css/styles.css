@@ -1,7 +1,10 @@
 /* leorib — design system v1.0 (base: direção 6a em diante)
-   Tokens de cor, tipo, espaço, raios e motion. Modo escuro troca só tokens, nunca layout. */
+   Tokens de cor, tipo, espaço, raios e motion. Modo escuro troca só tokens, nunca layout.
+   Os temas valem para qualquer elemento com data-theme (não só o <html>): o overlay da troca de
+   tema usa data-theme com o tema NOVO para pegar as cores dele sem repetir hex no JS. */
 
-:root {
+:root,
+[data-theme="light"] {
   /* paleta clara */
   --papel: #F3F0E6;
   --gesso: #E6E2D6;
@@ -86,7 +89,7 @@
    então os dois blocos abaixo precisam ter EXATAMENTE os mesmos valores:
    1) escolha explícita do usuário (data-theme="dark", ver js/site.js);
    2) sem escolha salva: segue o sistema, a não ser que o usuário tenha escolhido o claro. */
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   --bg: #151A15;
   --surface: #1E251E;
   --ink: #ECE8DC;
@@ -1019,19 +1022,22 @@ em { font-style: italic; }
 }
 @keyframes revela-seguranca { to { opacity: 1; transform: none; clip-path: inset(0 0 0 0); } }
 
-/* troca de tema (js/site.js). Conceito "Anéis": o tema novo nasce no botão e cresce em círculo.
-   O JS anima o clip-path da camada nova; aqui só desligamos o crossfade padrão do navegador,
-   para as duas camadas ficarem paradas e a única coisa que se move ser o círculo. */
-@media (prefers-reduced-motion: no-preference) {
-  .tema-anel::view-transition-old(root),
-  .tema-anel::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+/* troca de tema (js/site.js). Conceito "Anéis": um círculo na cor do tema novo nasce no botão e
+   cresce até cobrir a tela; anéis finos vão na frente, como anéis de tronco. Tudo fica num overlay
+   por cima da página e só anima transform e opacity, que o navegador resolve na composição, sem
+   repintar a página. O overlay recebe data-theme com o tema novo, então var(--bg) e var(--brand)
+   já são as cores dele. Posição e tamanho vêm do JS (--x, --y, --d). */
+.tema-overlay {
+  position: fixed; inset: 0; z-index: 2147483647; pointer-events: none;
+  overflow: hidden; contain: strict; background: none;
 }
-
-/* plano B (sem View Transitions): só suaviza as cores por ~300ms. Classe temporária, nunca no carregamento. */
-.tema-fade,
-.tema-fade :where(*:not(svg *, [data-reveal], [data-strip], [data-line])) {
-  transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+.tema-circulo, .tema-aro {
+  position: absolute; left: calc(var(--x) - var(--d) / 2); top: calc(var(--y) - var(--d) / 2);
+  width: var(--d); height: var(--d); border-radius: 50%;
+  transform: scale(0);
 }
+.tema-circulo { background: var(--bg); }
+.tema-aro { border: 3px solid var(--brand); opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

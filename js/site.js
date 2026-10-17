@@ -104,8 +104,10 @@
   /* ---------- tema claro/escuro ----------
      Sem escolha salva, o CSS segue prefers-color-scheme. Ao clicar, a escolha vira data-theme no <html>
      (e é salva). O tema salvo é aplicado por um <script> inline no <head> de cada página, antes do CSS.
-     A troca usa a View Transitions API: o navegador tira uma "foto" da tela antiga, aplicamos o tema novo
-     e revelamos a foto nova com um círculo (clip-path) que cresce a partir do botão, como um anel de tronco. */
+     A troca ("Anéis") usa um overlay por cima da página: um círculo na cor do tema novo cresce a partir do
+     botão só com transform: scale(), com anéis finos à frente. Quando ele cobre a tela, o tema troca por
+     baixo e o overlay some com opacity. Como só transform e opacity mudam, o navegador anima tudo na
+     composição (GPU), sem repintar a página a cada frame. */
 
   const temaBtns = document.querySelectorAll('[data-theme-toggle]');
   if (temaBtns.length) {
@@ -130,32 +132,53 @@
     rotular();
     escuroDoSistema.addEventListener('change', rotular);
 
-    temaBtns.forEach(btn => btn.addEventListener('click', () => {
-      const proximo = temaAtual() === 'dark' ? 'light' : 'dark';
+    const EXPANSAO = 800;                         // ms até o círculo cobrir a tela
+    const CURVA = 'cubic-bezier(.65, 0, .35, 1)';
+    // anéis: atraso (ms) e até onde crescem em relação ao círculo; o primeiro vai à frente da borda
+    const ANEIS = [{ atraso: 0, ate: 1.06 }, { atraso: 90, ate: .9 }, { atraso: 180, ate: .74 }];
+    let trocando = false;
 
-      if (menosMovimento.matches) { aplicar(proximo); return; }
-
-      if (!document.startViewTransition) {
-        root.classList.add('tema-fade');
-        aplicar(proximo);
-        setTimeout(() => root.classList.remove('tema-fade'), 400);
-        return;
-      }
-
+    const trocarComAneis = (btn, proximo) => {
       // centro do botão e raio até o canto mais distante da tela: o círculo termina cobrindo tudo
       const r = btn.getBoundingClientRect();
       const x = r.left + r.width / 2, y = r.top + r.height / 2;
       const raio = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
 
-      root.classList.add('tema-anel');
-      const troca = document.startViewTransition(() => aplicar(proximo));
-      troca.ready.then(() => {
-        root.animate(
-          { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${raio}px at ${x}px ${y}px)`] },
-          { duration: 700, easing: 'cubic-bezier(.2, .7, .2, 1)', pseudoElement: '::view-transition-new(root)', fill: 'forwards' }
-        );
-      }).catch(() => {});
-      troca.finished.catch(() => {}).finally(() => root.classList.remove('tema-anel'));
+      // o círculo já nasce no tamanho final e só a escala anima (0 → 1): assim ele é desenhado uma vez
+      const overlay = document.createElement('div');
+      overlay.className = 'tema-overlay';
+      overlay.dataset.theme = proximo;            // as cores do overlay já são as do tema novo
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.style.cssText = `--x:${x}px;--y:${y}px;--d:${Math.ceil(raio * 2) + 4}px`;
+      const circulo = document.createElement('span');
+      circulo.className = 'tema-circulo';
+      overlay.appendChild(circulo);
+      const aros = ANEIS.map(() => overlay.appendChild(Object.assign(document.createElement('span'), { className: 'tema-aro' })));
+      [circulo, ...aros].forEach(el => { el.style.willChange = 'transform, opacity'; });
+      document.body.appendChild(overlay);
+
+      const expansao = circulo.animate({ transform: ['scale(0)', 'scale(1)'] }, { duration: EXPANSAO, easing: CURVA, fill: 'forwards' });
+      aros.forEach((aro, i) => aro.animate([
+        { transform: 'scale(0)', opacity: 0 },
+        { opacity: .5, offset: .15 },
+        { opacity: .35, offset: .7 },
+        { transform: `scale(${ANEIS[i].ate})`, opacity: 0 },
+      ], { duration: EXPANSAO, delay: ANEIS[i].atraso, easing: CURVA, fill: 'forwards' }));
+
+      const fim = () => { overlay.remove(); trocando = false; };
+      expansao.finished.then(() => {
+        aplicar(proximo);                         // troca por baixo, com a tela toda coberta
+        overlay.style.willChange = 'opacity';
+        return overlay.animate({ opacity: [1, 0] }, { duration: 250, easing: 'ease-out', fill: 'forwards' }).finished;
+      }).catch(() => { if (root.dataset.theme !== proximo) aplicar(proximo); }).finally(fim);
+    };
+
+    temaBtns.forEach(btn => btn.addEventListener('click', () => {
+      if (trocando) return;                       // ignora cliques durante a transição
+      const proximo = temaAtual() === 'dark' ? 'light' : 'dark';
+      if (menosMovimento.matches || !Element.prototype.animate) { aplicar(proximo); return; }
+      trocando = true;
+      try { trocarComAneis(btn, proximo); } catch (_) { document.querySelector('.tema-overlay')?.remove(); aplicar(proximo); trocando = false; }
     }));
   }
 
