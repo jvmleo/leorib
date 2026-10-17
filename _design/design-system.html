@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;700&amp;family=Atkinson+Hyperlegible+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F3F0E6;color:#22261F;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#2B5633}
+a:hover{color:#22261F}
+:focus-visible{outline:3px solid #2B5633;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+
+<div style="font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+
+  <header style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;padding:32px 0">
+    <span style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2rem;line-height:1;color:#2B5633"><dc-import name="Digital" size="{{ 36 }}" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></span>
+    <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Design system · v1.0 · out 2026 · base: <a href="leorib Direcoes.dc.html#6a">6a</a> em diante</span>
+  </header>
+
+  <div style="position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(180deg,#2B5633 0%,#2B5633 45%,#5E8A4E 66%,#C3D6A4 86%,#E6E2D6 100%);color:#F3F0E6;padding:clamp(32px,5vw,64px);min-height:520px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+    <div aria-hidden="true" style="position:absolute;z-index:-1;right:-120px;top:-120px;opacity:.35"><dc-import name="Digital" size="{{ 620 }}" aneis="{{ 12 }}" cor="#D6E3C3" semente="{{ false }}" hint-size="620px,620px"></dc-import></div>
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase">[ Ateliê digital · design system ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(3rem,2rem + 5vw,6.5rem);line-height:1;letter-spacing:-.02em;max-width:12ch">Bancada em <em style="font-style:italic">névoa.</em></h1>
+    <nav aria-label="Índice" style="display:flex;flex-wrap:wrap;gap:8px;color:#22261F">
+      <sc-for list="{{ indice }}" as="i" hint-placeholder-count="9"><a href="{{ i.href }}" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(243,240,230,.85);color:#22261F;text-decoration:none;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem" style-hover="background:#F3F0E6">{{ i.label }}</a></sc-for>
+    </nav>
+  </div>
+
+  <section id="principios" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px"><p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 00 · Princípios ]</p></div>
+    <div style="flex:3 1 560px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+      <sc-for list="{{ principios }}" as="p" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:1.5px solid #22261F;padding-top:16px">
+          <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.5rem;line-height:1.2">{{ p.t }}</span>
+          <span>{{ p.d }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="marca" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 01 · Marca ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Digital de árvore</h2>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;gap:32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:8px">
+        <div style="position:relative;aspect-ratio:1;border-radius:20px;background:#E6E2D6;display:grid;place-items:center">
+          <dc-import name="Digital" size="{{ 220 }}" aneis="{{ 9 }}" hint-size="220px,220px"></dc-import>
+          <span style="position:absolute;left:20px;bottom:16px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Passe o mouse · os anéis giram em ondas</span>
+        </div>
+        <div style="position:relative;aspect-ratio:1;border-radius:20px;background:#E6E2D6;display:grid;place-items:center">
+          <div style="position:relative;padding:40px;border:1px dashed #9A4F33">
+            <dc-import name="Digital" size="{{ 140 }}" aneis="{{ 7 }}" motion="{{ false }}" hint-size="140px,140px"></dc-import>
+            <span style="position:absolute;top:8px;left:10px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#22261F">x</span>
+          </div>
+          <span style="position:absolute;left:20px;bottom:16px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Área de proteção · x = ¼ do símbolo</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Conceito</span><span>Anéis de tronco que se fecham como uma impressão digital, com uma semente de argila no centro. A história de cada negócio não se repete, e a solução também não.</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Regras</span><span>Gerada por código a partir de um nome (seed). A da marca usa “leorib”; cada case pode usar o nome do cliente. Abaixo de 64 px, traço contínuo; abaixo de 32 px, sem semente.</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Wordmark</span><span><strong>leorib.</strong> sempre em minúsculas, Fraunces 500 com SOFT 100. O ponto em argila é o único acento fixo da marca.</span></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <div style="flex:1 1 300px;min-height:160px;border-radius:20px;background:#F3F0E6;border:1px solid #B9B5AA;display:flex;align-items:center;justify-content:center;gap:14px"><dc-import name="Digital" size="{{ 48 }}" hint-size="48px,48px"></dc-import><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:3rem;line-height:1;color:#2B5633">leorib<span style="color:#9A4F33">.</span></span></div>
+        <div style="flex:1 1 300px;min-height:160px;border-radius:20px;background:#2B5633;display:flex;align-items:center;justify-content:center;gap:14px"><dc-import name="Digital" size="{{ 48 }}" cor="#F3F0E6" corSemente="#D08A68" hint-size="48px,48px"></dc-import><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:3rem;line-height:1;color:#F3F0E6">leorib<span style="color:#D6E3C3">.</span></span></div>
+        <div style="flex:1 1 300px;min-height:160px;border-radius:20px;background:#151A15;display:flex;align-items:center;justify-content:center;gap:14px"><dc-import name="Digital" size="{{ 48 }}" cor="#8DB06E" corSemente="#D08A68" hint-size="48px,48px"></dc-import><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:3rem;line-height:1;color:#A9C98A">leorib<span style="color:#D08A68">.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cor" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 02 · Cor ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Claro e escuro</h2>
+      <p style="margin:0;color:#575A50;max-width:30ch">Contraste medido contra o fundo do modo. Cores marcadas como decorativas nunca levam texto.</p>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase">Modo claro</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:8px">
+          <sc-for list="{{ coresClaro }}" as="c" hint-placeholder-count="10">
+            <div style="display:flex;flex-direction:column;border-radius:16px;overflow:hidden;border:1px solid #B9B5AA;background:#F3F0E6">
+              <div style="height:96px;background:{{ c.hex }};color:{{ c.ink }};padding:12px 14px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ c.amostra }}</div>
+              <div style="padding:12px 14px;display:flex;flex-direction:column;gap:2px">
+                <span style="font-weight:700">{{ c.nome }}</span>
+                <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ c.hex }} · {{ c.ct }}</span>
+                <span style="font-size:1rem;color:#575A50">{{ c.papel }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase">Modo escuro</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:8px;padding:8px;border-radius:20px;background:#151A15">
+          <sc-for list="{{ coresEscuro }}" as="c" hint-placeholder-count="7">
+            <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;border:1px solid #3A433A;background:#1E251E;color:#ECE8DC">
+              <div style="height:96px;background:{{ c.hex }};color:{{ c.ink }};padding:12px 14px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ c.amostra }}</div>
+              <div style="padding:12px 14px;display:flex;flex-direction:column;gap:2px">
+                <span style="font-weight:700">{{ c.nome }}</span>
+                <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ c.hex }} · {{ c.ct }}</span>
+                <span style="font-size:1rem;color:#A9AD9F">{{ c.papel }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #B9B5AA">
+        <sc-for list="{{ regrasCor }}" as="r" hint-placeholder-count="4"><li style="padding:12px 0;border-bottom:1px solid #B9B5AA">{{ r }}</li></sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <section id="tipografia" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 03 · Tipografia ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Serifa macia, texto legível</h2>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;gap:40px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:8px">
+        <div style="border-radius:20px;background:#E6E2D6;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:4rem;line-height:1">Aa <em style="font-style:italic">Aa</em></span><span style="font-weight:700">Fraunces</span><span style="font-size:1rem">Títulos · 400 e 500 · SOFT 100 · itálico em uma palavra por título</span></div>
+        <div style="border-radius:20px;background:#E6E2D6;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-size:4rem;line-height:1">Aa</span><span style="font-weight:700">Atkinson Hyperlegible Next</span><span style="font-size:1rem">Texto corrido · 400, 500, 700 · mínimo 18px, entrelinha 1.6</span></div>
+        <div style="border-radius:20px;background:#E6E2D6;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:4rem;line-height:1">Aa</span><span style="font-weight:700">Atkinson Hyperlegible Mono</span><span style="font-size:1rem">Labels, navegação e números · caixa alta só em labels curtos, +0.08em</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:1px solid #22261F">
+        <sc-for list="{{ escala }}" as="e" hint-placeholder-count="8">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;padding:20px 0;border-bottom:1px solid #B9B5AA">
+            <div style="flex:0 0 200px;display:flex;flex-direction:column;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem"><span style="color:#22261F">{{ e.token }}</span><span style="color:#575A50">{{ e.valor }}</span></div>
+            <span style="flex:1 1 300px;min-width:0;font-family:{{ e.fam }};font-size:{{ e.css }};line-height:{{ e.lh }};font-variation-settings:'SOFT' 100;letter-spacing:{{ e.ls }};text-transform:{{ e.tt }}">{{ e.amostra }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="espaco" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 04 · Espaço e grid ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Múltiplos de 8</h2>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;gap:48px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ espacos }}" as="e" hint-placeholder-count="8">
+          <div style="display:flex;align-items:center;gap:16px"><span style="width:96px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">space-{{ e.n }}</span><span style="height:16px;width:{{ e.w }};border-radius:4px;background:#2B5633"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">{{ e.px }}</span></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <sc-for list="{{ grids }}" as="g" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem"><span style="font-weight:500">{{ g.nome }}</span><span style="color:#575A50">{{ g.spec }}</span></div>
+            <div style="max-width:{{ g.max }};height:88px;border-radius:12px;background:#E6E2D6;padding:0 {{ g.m }};display:grid;grid-template-columns:{{ g.cols }};column-gap:{{ g.g }}">
+              <sc-for list="{{ g.lista }}" as="x" hint-placeholder-count="4"><span style="background:rgba(43,86,51,.18);border-left:1px solid rgba(43,86,51,.4);border-right:1px solid rgba(43,86,51,.4)"></span></sc-for>
+            </div>
+          </div>
+        </sc-for>
+        <p style="margin:0;max-width:60ch">Layout editorial assimétrico: label nas colunas 1–3, conteúdo nas colunas 5–12. No tablet, label 1–2 e conteúdo 3–8. No mobile, label em cima, conteúdo embaixo.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px">
+        <sc-for list="{{ raios }}" as="r" hint-placeholder-count="6">
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span style="width:96px;height:72px;background:#D6E3C3;border:1.5px solid #2B5633;border-radius:{{ r.v }}"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ r.n }} · {{ r.v }}</span><span style="font-size:1rem;color:#575A50;max-width:14ch">{{ r.uso }}</span></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:1px solid #B9B5AA">
+        <sc-for list="{{ bordas }}" as="b" hint-placeholder-count="4"><div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid #B9B5AA"><span style="flex:0 0 120px;height:0;border-top:{{ b.css }}"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;flex:0 0 200px">{{ b.css }}</span><span>{{ b.uso }}</span></div></sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="texturas" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 05 · Texturas ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Da pedra à folha</h2>
+      <p style="margin:0;color:#575A50;max-width:30ch">Textura nunca fica atrás de parágrafo, formulário ou tabela.</p>
+    </div>
+    <div style="flex:3 1 560px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:8px">
+      <sc-for list="{{ texturas }}" as="t" hint-placeholder-count="7">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="height:180px;border-radius:16px;background:{{ t.tex }},{{ t.cor }};padding:12px"><span style="display:inline-flex;padding:4px 12px;border-radius:999px;background:rgba(243,240,230,.85);font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem">{{ t.nome }}</span></div>
+          <span style="font-size:1rem">{{ t.uso }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="motion" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 06 · Motion ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Devagar, como planta</h2>
+      <p style="margin:0;color:#575A50;max-width:30ch">Uma curva para tudo: cubic-bezier(.2,.7,.2,1). Com prefers-reduced-motion, todo movimento é desligado.</p>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;border-top:1px solid #22261F">
+      <sc-for list="{{ motion }}" as="m" hint-placeholder-count="7">
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:16px 0;border-bottom:1px solid #B9B5AA">
+          <span style="flex:0 0 180px;font-weight:700">{{ m.nome }}</span>
+          <span style="flex:0 0 200px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">{{ m.spec }}</span>
+          <span style="flex:1 1 240px">{{ m.uso }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="componentes" style="display:flex;flex-wrap:wrap;gap:24px 48px;padding:96px 0;border-bottom:1px solid #B9B5AA">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 07 · Componentes ]</p>
+      <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">Peças da bancada</h2>
+    </div>
+    <div style="flex:3 1 560px;display:flex;flex-direction:column;gap:56px">
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Botões</span>
+        <div style="overflow-x:auto"><div style="display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:16px;align-items:center;min-width:640px">
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">padrão</span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">hover</span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">foco</span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">desabilitado</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;font-weight:500">Ver cases →</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#22261F;color:#F3F0E6;font-weight:500">Ver cases →</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;font-weight:500;outline:3px solid #2B5633;outline-offset:3px">Ver cases →</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#E6E2D6;color:#575A50;font-weight:500;cursor:not-allowed">Ver cases →</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid #2B5633;color:#2B5633;font-weight:500">Secundário</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid #2B5633;background:#D6E3C3;color:#22261F;font-weight:500">Secundário</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid #2B5633;color:#2B5633;font-weight:500;outline:3px solid #2B5633;outline-offset:3px">Secundário</span>
+          <span style="justify-self:start;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px dashed #B9B5AA;color:#575A50;font-weight:500">Secundário</span>
+          <span style="justify-self:start;color:#2B5633;font-weight:500;text-decoration:underline;text-underline-offset:4px">Link de texto</span>
+          <span style="justify-self:start;color:#22261F;font-weight:500;text-decoration:underline;text-underline-offset:4px">Link de texto</span>
+          <span style="justify-self:start;color:#2B5633;font-weight:500;text-decoration:underline;text-underline-offset:4px;outline:3px solid #2B5633;outline-offset:3px;border-radius:2px">Link de texto</span>
+          <span style="justify-self:start;color:#575A50;font-weight:500">Link de texto</span>
+        </div></div>
+        <span style="font-size:1rem;color:#575A50">Altura mínima 52px (48px no header) · texto 18px · desabilitado sempre com rótulo legível, nunca só opacidade.</span>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:40px">
+        <div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Label</span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Cases ]</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Etiquetas</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border:1px solid #575A50;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#575A50">Alimentação</span><span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;background:#D6E3C3;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem">Planilhas</span><span style="display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 12px 0 4px;background:#E6E2D6;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem"><span style="width:24px;height:24px;border-radius:50%;background-color:#2B5633;background-image:{{ nat.folha }}"></span>Web</span></div></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Navegação · desktop e mobile</span>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 24px;border-radius:20px;background:#E6E2D6">
+          <span style="display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.75rem;line-height:1;color:#2B5633"><dc-import name="Digital" size="{{ 30 }}" hint-size="30px,30px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></span>
+          <span style="display:flex;gap:4px;padding:4px;border:1px solid #B9B5AA;border-radius:999px;background:#F3F0E6;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.06em;text-transform:uppercase"><span style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#22261F;color:#F3F0E6">Cases</span><span style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px">Serviços</span><span style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px">Sobre</span></span>
+          <span style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#2B5633;color:#F3F0E6;font-weight:500">Fale comigo</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <div style="width:320px;max-width:100%;border-radius:28px;border:1px solid #B9B5AA;background:#F3F0E6;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px"><span style="display:flex;align-items:center;gap:8px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.5rem;line-height:1;color:#2B5633"><dc-import name="Digital" size="{{ 26 }}" hint-size="26px,26px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></span><span style="display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #22261F;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Menu</span></div>
+            <div style="height:180px;margin:0 12px 12px;border-radius:20px;background-image:{{ tx.graoLuz }},linear-gradient(180deg,#2B5633,#5E8A4E 70%,#C3D6A4)"></div>
+          </div>
+          <div style="width:320px;max-width:100%;border-radius:28px;background-color:#2B5633;background-image:{{ tx.graoLuz }};color:#F3F0E6;padding:16px 20px 24px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="display:flex;align-items:center;gap:8px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.5rem;line-height:1"><dc-import name="Digital" size="{{ 26 }}" cor="#F3F0E6" corSemente="#D08A68" hint-size="26px,26px"></dc-import>leorib.</span><span style="display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:#F3F0E6;color:#2B5633;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Fechar</span></div>
+            <span style="padding:14px 0;border-bottom:1px solid rgba(214,227,195,.4);font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:2rem;line-height:1.1">Cases</span>
+            <span style="padding:14px 0;border-bottom:1px solid rgba(214,227,195,.4);font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:2rem;line-height:1.1">Serviços</span>
+            <span style="padding:14px 0;border-bottom:1px solid rgba(214,227,195,.4);font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:2rem;line-height:1.1">Sobre</span>
+            <span style="margin-top:12px;display:inline-flex;align-self:flex-start;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#F3F0E6;color:#2B5633;font-weight:700">Fale comigo</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Moldura de print</span>
+          <div style="border-radius:20px;overflow:hidden;background-color:#E6E2D6;background-image:{{ tx.linho }};padding:16px"><div style="aspect-ratio:4 / 3;border-radius:10px;background:repeating-linear-gradient(135deg,#F3F0E6 0 12px,#ECE8DC 12px 13px);box-shadow:0 1px 0 #B9B5AA,0 12px 24px -18px rgba(34,38,31,.4);display:grid;place-items:center"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">[ print ]</span></div></div>
+          <span style="font-size:1rem;color:#575A50">Mat de linho, raio 20/10, legenda mono “Fig. 00 — …”. Hover: sobe 4px.</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Indicador (KPI)</span>
+          <div style="border-radius:20px;background-image:{{ tx.graoLuz }},linear-gradient(160deg,#1F3A25,#2B5633);color:#F3F0E6;padding:24px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-direction:column"><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:3.5rem;line-height:1">6 h</span><span>economizadas por semana</span></div>
+            <div style="display:flex;flex-direction:column;gap:6px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#D6E3C3"><div style="display:flex;align-items:center;gap:12px"><span style="flex:1;height:8px;border-radius:999px;background:#B9B5AA"></span><span style="white-space:nowrap">antes: 7 h</span></div><div style="display:flex;align-items:center;gap:12px"><span style="flex:1;height:8px;border-radius:999px;background:rgba(214,227,195,.15)"><span style="display:block;width:14%;height:100%;border-radius:999px;background:#8DB06E"></span></span><span style="white-space:nowrap">depois: 1 h</span></div></div>
+          </div>
+          <span style="font-size:1rem;color:#575A50">Sempre número + rótulo + antes/depois. Barras desenham ao entrar na tela.</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Card de case (linha)</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:24px;padding:24px 0;border-top:1px solid #B9B5AA">
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Case 01</span><span style="font-weight:700">Padaria Grão Fino</span><span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;background:#D6E3C3;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem">Planilhas</span></div>
+          <div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.625rem;line-height:1.15">Estoque que avisa antes de faltar</span><div style="background:#E6E2D6;border-radius:16px;padding:14px 18px"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Resultado</span><div style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:2.25rem;line-height:1.1;color:#2B5633">6 h</div><span>a menos por semana</span></div></div>
+          <div style="border-radius:16px;background-color:#E6E2D6;background-image:{{ tx.linho }};padding:12px"><div style="aspect-ratio:4 / 5;border-radius:8px;background:repeating-linear-gradient(135deg,#F3F0E6 0 12px,#ECE8DC 12px 13px)"></div></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Formulário · padrão, foco, erro</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;padding:24px;border-radius:20px;background:#E6E2D6">
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">Seu nome<input type="text" placeholder="Leo" style="min-height:52px;padding:12px 16px;font:inherit;font-weight:400;background:#F3F0E6;color:#22261F;border:1.5px solid #575A50;border-radius:12px"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">E-mail ou WhatsApp<span style="min-height:52px;padding:12px 16px;font-weight:400;background:#F3F0E6;border:1.5px solid #2B5633;border-radius:12px;outline:3px solid #2B5633;outline-offset:2px">oi@</span></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">O que você quer resolver?<span style="min-height:52px;padding:12px 16px;font-weight:400;background:#F3F0E6;border:1.5px solid #9A4F33;border-radius:12px;color:#575A50">vazio</span><span style="font-size:1rem;font-weight:400;color:#9A4F33">Conte em uma frase o que toma tempo.</span></label>
+        </div>
+        <span style="font-size:1rem;color:#575A50">Borda em grafite, raio 12, label sempre visível em cima. Erro em argila com texto explicativo, nunca só a cor.</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Respiro de névoa e rodapé</span>
+        <div style="position:relative;height:200px;border-radius:20px;overflow:hidden;background-image:{{ tx.grao }},linear-gradient(180deg,#F3F0E6 0%,#D6E3C3 34%,#8DB06E 54%,#D6E3C3 76%,#F3F0E6 100%);display:grid;place-items:center"><dc-import name="Digital" size="{{ 72 }}" cor="#F3F0E6" corSemente="#D08A68" hint-size="72px,72px"></dc-import></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:20px;border:1px solid #B9B5AA;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">
+          <span style="display:flex;align-items:center;gap:10px"><dc-import name="Digital" size="{{ 24 }}" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+          <span style="display:flex;gap:6px"><sc-for list="{{ texturas3 }}" as="f" hint-placeholder-count="3"><span style="width:48px;height:20px;border-radius:999px;background-color:{{ f.cor }};background-image:{{ f.tex }}"></span></sc-for></span>
+          <span>Voltar ao topo ↑</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paginas" style="display:flex;flex-direction:column;gap:48px;padding:96px 0 128px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 48px">
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:12px">
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ 08 · Páginas ]</p>
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:1.1">O que já está <em style="font-style:italic">pronto</em></h2>
+      </div>
+      <p style="flex:3 1 560px;margin:0;max-width:60ch">Cada página usa o mesmo header, o mesmo rodapé e a grade de 12 colunas. Abaixo, a ordem dos blocos de cada uma, os componentes usados e as regras de conteúdo para atualizar sem quebrar o layout.</p>
+    </div>
+    <sc-for list="{{ paginas }}" as="p" hint-placeholder-count="6">
+      <article id="{{ p.ancora }}" style="display:flex;flex-wrap:wrap;gap:32px 48px;padding-top:32px;border-top:1.5px solid #22261F">
+        <div style="flex:1 1 300px;max-width:420px;display:flex;flex-direction:column;gap:12px">
+          <a href="{{ p.href }}" aria-label="Abrir {{ p.t }}" style="display:block;height:{{ p.h }};border-radius:20px;overflow:hidden;background-color:#E6E2D6;background-image:{{ p.bg }};background-size:{{ p.fit }};background-position:top center;background-repeat:no-repeat;border:1px solid #B9B5AA;transition:transform .5s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-4px)"></a>
+          <a href="{{ p.href }}" style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;text-underline-offset:4px">Abrir {{ p.id }} ↗</a>
+        </div>
+        <div style="flex:2 1 480px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">{{ p.id }} · {{ p.tipo }}</span>
+            <h3 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:clamp(1.75rem,1.2rem + 1.4vw,2.5rem);line-height:1.1">{{ p.t }}</h3>
+            <p style="margin:0;max-width:56ch">{{ p.objetivo }}</p>
+          </div>
+          <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #B9B5AA">
+            <sc-for list="{{ p.blocos }}" as="b" hint-placeholder-count="6">
+              <li style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid #B9B5AA">
+                <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#2B5633;padding-top:3px">{{ b.n }}</span>
+                <div style="display:flex;flex-direction:column"><span style="font-weight:700">{{ b.t }}</span><span style="font-size:1rem;color:#575A50">{{ b.d }}</span></div>
+              </li>
+            </sc-for>
+          </ol>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:16px 20px;border-radius:16px;background:#E6E2D6">
+            <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Para atualizar</span>
+            <span>{{ p.regra }}</span>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const D = [.13, .15, .12];
+const tex = (w, layers) => {
+  const s = `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${w}'>` + layers.map((l, i) =>
+    `<filter id='f${i}'><feTurbulence type='fractalNoise' baseFrequency='${l.f}' numOctaves='${l.o}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${l.c[0]} 0 0 0 0 ${l.c[1]} 0 0 0 0 ${l.c[2]} 0 0 0 ${l.a}'/></filter><rect width='100%' height='100%' filter='url(#f${i})'/>`).join('') + `</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+};
+const svgUrl = s => `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+const TX = {
+  grao: tex(240, [{ f: '.85', o: 3, c: D, a: '.14 0' }]),
+  graoLuz: tex(240, [{ f: '.8', o: 3, c: [1, 1, 1], a: '.2 0' }]),
+  linho: tex(200, [{ f: '.012 .8', o: 2, c: D, a: '.26 0' }, { f: '.8 .012', o: 2, c: D, a: '.22 0' }]),
+};
+const NAT = {
+  seixo: svgUrl(`<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><defs><radialGradient id='g' cx='34%' cy='28%' r='75%'><stop offset='0' stop-color='#DCD7CB'/><stop offset='.6' stop-color='#C9C4B7'/><stop offset='1' stop-color='#B5B0A3'/></radialGradient><radialGradient id='h' cx='34%' cy='28%' r='75%'><stop offset='0' stop-color='#D2CEC1'/><stop offset='1' stop-color='#ABA79B'/></radialGradient><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .13 0'/></filter></defs><rect width='220' height='220' fill='#BEB9AC'/><ellipse cx='42' cy='38' rx='36' ry='26' transform='rotate(-14 42 38)' fill='url(#g)'/><ellipse cx='128' cy='30' rx='30' ry='22' fill='url(#h)'/><ellipse cx='192' cy='86' rx='26' ry='32' fill='url(#g)'/><ellipse cx='84' cy='112' rx='40' ry='28' transform='rotate(18 84 112)' fill='url(#g)'/><ellipse cx='160' cy='162' rx='36' ry='25' transform='rotate(-20 160 162)' fill='url(#h)'/><ellipse cx='34' cy='184' rx='30' ry='22' fill='url(#g)'/><ellipse cx='100' cy='200' rx='22' ry='16' fill='url(#h)'/><rect width='220' height='220' filter='url(#n)'/></svg>`),
+  musgo: tex(200, [{ f: '.55', o: 4, c: [.12, .26, .12], a: '.5 -.18' }, { f: '.9', o: 2, c: [.86, .93, .62], a: '.32 -.1' }]),
+  folha: TX.graoLuz + ',repeating-linear-gradient(58deg,rgba(214,227,195,0) 0 30px,rgba(214,227,195,.1) 30px 31px),radial-gradient(80% 60% at 70% 20%,rgba(141,176,110,.42),rgba(141,176,110,0) 70%)',
+};
+const col = n => Array.from({ length: n }, (_, i) => i);
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tx: TX, nat: NAT,
+      indice: [['00', 'Princípios', '#principios'], ['01', 'Marca', '#marca'], ['02', 'Cor', '#cor'], ['03', 'Tipografia', '#tipografia'], ['04', 'Espaço e grid', '#espaco'], ['05', 'Texturas', '#texturas'], ['06', 'Motion', '#motion'], ['07', 'Componentes', '#componentes'], ['08', 'Páginas', '#paginas']].map(([n, t, href]) => ({ label: n + ' · ' + t, href })),
+      principios: [
+        { t: 'A solução no centro', d: 'Arte no material e nas molduras; o case, o número e a ação sempre em primeiro plano.' },
+        { t: 'Legível para todos', d: 'Texto de 18px para cima, entrelinha 1.6, contraste AA no mínimo e foco sempre visível.' },
+        { t: 'Linear e com respiro', d: 'Grade de 12 colunas, linhas finas e muito espaço vazio. Nada empilhado à toa.' },
+        { t: 'Orgânico e feito à mão', d: 'Pedra, musgo e folha; névoas granuladas; uma digital única para cada cliente.' },
+      ],
+      coresClaro: [
+        { nome: 'Papel', hex: '#F3F0E6', ct: 'fundo', papel: 'Fundo principal', ink: '#22261F', amostra: 'Aa' },
+        { nome: 'Gesso', hex: '#E6E2D6', ct: 'superfície', papel: 'Cards, caixas de resultado', ink: '#22261F', amostra: 'Aa' },
+        { nome: 'Sálvia', hex: '#D6E3C3', ct: 'fundo', papel: 'Destaques, etiquetas', ink: '#22261F', amostra: 'Aa' },
+        { nome: 'Tinta', hex: '#22261F', ct: '13.5:1', papel: 'Texto principal', ink: '#F3F0E6', amostra: 'Aa' },
+        { nome: 'Folha', hex: '#2B5633', ct: '7.4:1', papel: 'Marca, botões, links', ink: '#F3F0E6', amostra: 'Aa' },
+        { nome: 'Grafite', hex: '#575A50', ct: '6.2:1', papel: 'Texto secundário, bordas de campo', ink: '#F3F0E6', amostra: 'Aa' },
+        { nome: 'Argila', hex: '#9A4F33', ct: '5.2:1', papel: 'Acento raro, ponto do wordmark, erro', ink: '#F3F0E6', amostra: 'Aa' },
+        { nome: 'Folha média', hex: '#5E8A4E', ct: 'decorativa', papel: 'Névoas e gradientes', ink: '#F3F0E6', amostra: '—' },
+        { nome: 'Broto', hex: '#8DB06E', ct: 'decorativa', papel: 'Névoas, folha do símbolo', ink: '#22261F', amostra: '—' },
+        { nome: 'Concreto', hex: '#B9B5AA', ct: 'decorativa', papel: 'Divisórias, linhas finas', ink: '#22261F', amostra: '—' },
+      ],
+      coresEscuro: [
+        { nome: 'Noite', hex: '#151A15', ct: 'fundo', papel: 'Fundo principal', ink: '#ECE8DC', amostra: 'Aa' },
+        { nome: 'Carvão', hex: '#1E251E', ct: 'superfície', papel: 'Cards e formulários', ink: '#ECE8DC', amostra: 'Aa' },
+        { nome: 'Papel', hex: '#ECE8DC', ct: '14.9:1', papel: 'Texto principal', ink: '#151A15', amostra: 'Aa' },
+        { nome: 'Névoa', hex: '#A9AD9F', ct: '7.9:1', papel: 'Texto secundário', ink: '#151A15', amostra: 'Aa' },
+        { nome: 'Broto claro', hex: '#A9C98A', ct: '10:1', papel: 'Botões e links, com texto escuro', ink: '#151A15', amostra: 'Aa' },
+        { nome: 'Argila clara', hex: '#D08A68', ct: '6.6:1', papel: 'Acento raro', ink: '#151A15', amostra: 'Aa' },
+        { nome: 'Linha', hex: '#3A433A', ct: 'decorativa', papel: 'Divisórias', ink: '#ECE8DC', amostra: '—' },
+      ],
+      regrasCor: [
+        'Botão primário: Folha com texto Papel (claro) · Broto claro com texto Noite (escuro).',
+        'Argila aparece em no máximo dois pontos por página e nunca como texto sobre Sálvia.',
+        'Bordas de campos de formulário sempre em Grafite (claro) ou #8F9488 (escuro).',
+        'Folha média, Broto e Concreto são decorativos: nunca usar em texto.',
+      ],
+      escala: [
+        { token: 'display', valor: 'clamp(2.75rem, 1.5rem + 4.6vw, 5.75rem)', fam: 'Fraunces,serif', css: 'clamp(2.75rem,1.5rem + 4.6vw,5.75rem)', lh: '1.04', ls: '-.02em', tt: 'none', amostra: 'Planilhas e sites' },
+        { token: 'h1', valor: 'clamp(2.75rem, 1.5rem + 4vw, 5rem)', fam: 'Fraunces,serif', css: 'clamp(2.75rem,1.5rem + 4vw,5rem)', lh: '1.03', ls: '-.02em', tt: 'none', amostra: 'Página de case' },
+        { token: 'h2', valor: 'clamp(2rem, 1.2rem + 2.6vw, 3.5rem)', fam: 'Fraunces,serif', css: 'clamp(2rem,1.2rem + 2.6vw,3.5rem)', lh: '1.1', ls: '-.01em', tt: 'none', amostra: 'Problemas reais' },
+        { token: 'h3', valor: 'clamp(1.5rem, 1rem + 1.2vw, 2.125rem)', fam: 'Fraunces,serif', css: 'clamp(1.5rem,1rem + 1.2vw,2.125rem)', lh: '1.15', ls: '0', tt: 'none', amostra: 'Estoque que avisa antes de faltar' },
+        { token: 'lead', valor: 'clamp(1.25rem, 1rem + .6vw, 1.5rem) / 1.55', fam: "'Atkinson Hyperlegible Next',sans-serif", css: 'clamp(1.25rem,1rem + .6vw,1.5rem)', lh: '1.55', ls: '0', tt: 'none', amostra: 'Ferramentas simples, feitas para o seu negócio.' },
+        { token: 'body', valor: '1.125rem (18px) / 1.6 · até 70ch', fam: "'Atkinson Hyperlegible Next',sans-serif", css: '1.125rem', lh: '1.6', ls: '0', tt: 'none', amostra: 'Texto corrido, sempre alinhado à esquerda.' },
+        { token: 'label', valor: '.9375rem · mono · +.08em · caixa alta', fam: "'Atkinson Hyperlegible Mono',monospace", css: '.9375rem', lh: '1.4', ls: '.08em', tt: 'uppercase', amostra: '[ Cases ]' },
+        { token: 'caption', valor: '.875rem · mono', fam: "'Atkinson Hyperlegible Mono',monospace", css: '.875rem', lh: '1.4', ls: '0', tt: 'none', amostra: 'Fig. 01 — planilha de estoque' },
+      ],
+      espacos: [8, 16, 24, 32, 48, 64, 96, 128].map((px, i) => ({ n: i + 1, px: px + 'px', w: px * 2.4 + 'px' })),
+      grids: [
+        { nome: 'Desktop · ≥ 1024px', spec: '12 colunas · gutter 24 · margem 64 · máx. 1280', max: '100%', m: '24px', g: '12px', cols: 'repeat(12,minmax(0,1fr))', lista: col(12) },
+        { nome: 'Tablet · 640–1023px', spec: '8 colunas · gutter 24 · margem 40', max: '72%', m: '18px', g: '12px', cols: 'repeat(8,minmax(0,1fr))', lista: col(8) },
+        { nome: 'Mobile · < 640px', spec: '4 colunas · gutter 16 · margem 20', max: '38%', m: '12px', g: '8px', cols: 'repeat(4,minmax(0,1fr))', lista: col(4) },
+      ],
+      raios: [
+        { n: 'r-xs', v: '4px', uso: 'Detalhes, chips de swatch' },
+        { n: 'r-sm', v: '12px', uso: 'Campos de formulário' },
+        { n: 'r-md', v: '16px', uso: 'Faixas, caixas, cards' },
+        { n: 'r-lg', v: '20px', uso: 'Molduras de print' },
+        { n: 'r-xl', v: '28px', uso: 'Painéis: hero, contato' },
+        { n: 'r-pill', v: '999px', uso: 'Botões, nav, etiquetas' },
+      ],
+      bordas: [
+        { css: '1px solid #B9B5AA', uso: 'Divisórias e linhas da grade' },
+        { css: '1px solid #22261F', uso: 'Abertura de bloco (linha forte)' },
+        { css: '1.5px solid #575A50', uso: 'Campos de formulário' },
+        { css: '1.5px solid #2B5633', uso: 'Botão secundário' },
+      ],
+      texturas: [
+        { nome: 'seixo', cor: '#B3AEA1', tex: NAT.seixo, uso: 'Planilhas · categoria 01' },
+        { nome: 'musgo', cor: '#8DB06E', tex: NAT.musgo, uso: 'Automações · categoria 02' },
+        { nome: 'folha', cor: '#2B5633', tex: NAT.folha, uso: 'Web · categoria 03' },
+        { nome: 'linho', cor: '#E6E2D6', tex: TX.linho, uso: 'Mat das molduras de print' },
+        { nome: 'grão', cor: '#F3F0E6', tex: TX.grao, uso: 'Topo do hero, aberturas (5–8%)' },
+        { nome: 'névoa', cor: '#2B5633', tex: TX.graoLuz + ',linear-gradient(180deg,#2B5633 0%,#5E8A4E 55%,#C3D6A4 85%,#E6E2D6 100%)', uso: 'Hero, contato, cartão de visitas' },
+        { nome: 'pinceladas', cor: '#F3F0E6', tex: 'radial-gradient(ellipse 6px 15px at 50% 50%,rgba(43,86,51,.85) 0 68%,transparent 74%) 0 0 / 22px 34px,radial-gradient(ellipse 7px 16px at 50% 50%,rgba(141,176,110,.85) 0 68%,transparent 74%) 11px 17px / 26px 38px', uso: 'Página Sobre · painel artístico' },
+      ],
+      texturas3: [{ cor: '#B3AEA1', tex: NAT.seixo }, { cor: '#8DB06E', tex: NAT.musgo }, { cor: '#2B5633', tex: NAT.folha }],
+      motion: [
+        { nome: 'Curva', spec: 'cubic-bezier(.2,.7,.2,1)', uso: 'Usada em todas as transições.' },
+        { nome: 'Revelar', spec: '800ms · y 16px → 0', uso: 'Títulos (linha a linha, +120ms), parágrafos e cards ao entrar na tela.' },
+        { nome: 'Linha', spec: '1100ms · scaleX 0 → 1', uso: 'Divisórias, barras de KPI e linha do tempo.' },
+        { nome: 'Faixa', spec: '1000ms · clip de baixo p/ cima', uso: 'Faixas de categoria, +120ms entre cada; no hover expandem (flex 1 → 1.9, 700ms).' },
+        { nome: 'Névoa', spec: '2200ms · y 96px → 0', uso: 'Brilhos e sóis granulados sobem devagar.' },
+        { nome: 'Hover', spec: '250–500ms', uso: 'Botões trocam a cor; prints sobem 4px; links de contato deslizam 12px.' },
+        { nome: 'Logo', spec: 'entrada 1200ms · hover 900ms', uso: 'Anéis nascem do centro para fora (+70ms cada); no hover giram em ondas alternadas e a semente cresce.' },
+      ],
+      paginas: [
+        { id: '6a', ancora: 'p-home', tipo: "Home · modo claro", t: "Home", bg: "url('assets/doc-6a.png')", h: '520px', fit: 'cover', href: 'leorib Direcoes.dc.html#6a', objetivo: "Dizer em 5 segundos o que a leorib faz e levar a pessoa até um case ou ao contato.", regra: "Mostrar no máximo 3 cases na home, sempre com um número no resultado. O título do hero tem 3 linhas; mantenha cada uma curta.", blocos: [{ n: '01', t: "Header", d: "Digital + wordmark, nav em pílula, botão “Fale comigo”." }, { n: '02', t: "Hero em névoa", d: "Labels no topo, título em 3 linhas com itálico, pílulas de serviço." }, { n: '03', t: "Sobre curto", d: "Uma frase de apresentação + botões primário e secundário." }, { n: '04', t: "Faixas de categoria", d: "Seixo, musgo e folha; abrem de baixo e expandem no hover." }, { n: '05', t: "Serviços", d: "Três linhas com amostra de textura, título e descrição." }, { n: '06', t: "Respiro de névoa", d: "Faixa de gradiente com a digital no centro." }, { n: '07', t: "Cases", d: "Linha por case: meta, problema/solução/resultado e moldura de print." }, { n: '08', t: "Contato", d: "Painel folha com links e formulário em cartão de papel." }, { n: '09', t: "Rodapé", d: "Digital, pílulas de textura e “voltar ao topo”." }] },
+        { id: '7a', ancora: 'p-escuro', tipo: "Home · modo escuro", t: "Home no escuro", bg: "url('assets/doc-7a.png')", h: '520px', fit: 'cover', href: 'leorib Direcoes.dc.html#7a', objetivo: "A mesma home com os tokens do modo escuro, para quem usa o sistema no escuro.", regra: "Trocar só tokens, nunca layout. Folha (#2B5633) não é usada como cor de ação no escuro, por falta de contraste.", blocos: [{ n: '01', t: "Mesma estrutura da 6a", d: "Nenhum bloco muda de lugar." }, { n: '02', t: "Hero", d: "Névoa vai do verde-noite para um brilho de broto na base; pílulas em texto escuro." }, { n: '03', t: "Ações", d: "Botões e links em Broto claro com texto Noite." }, { n: '04', t: "Respiro", d: "Horizonte verde no meio do escuro." }, { n: '05', t: "Contato", d: "Painel folha mantido; formulário em Carvão com campos Noite." }] },
+        { id: '8a', ancora: 'p-sobre', tipo: "Página", t: "Sobre", bg: "url('assets/doc-8a.png')", h: '520px', fit: 'cover', href: 'leorib Direcoes.dc.html#8a', objetivo: "Apresentar o Leo com mais arte e personalidade, sem perder a leitura fácil.", regra: "A cada duas semanas, troque capa, título, artista, datas e link da trilha. O retrato precisa ser quadrado, com o rosto no centro.", blocos: [{ n: '01', t: "Abertura", d: "“Oi, eu sou o Leo.”, retrato em seixo com duotom verde (hover mostra a foto original) e anéis ao fundo." }, { n: '02', t: "Faixa de dados", d: "Idade, cidade, começo e estudo, em 4 colunas." }, { n: '03', t: "História", d: "Primeira frase em Fraunces, depois texto corrido." }, { n: '04', t: "Caminho", d: "Linha do tempo pontilhada com 4 marcos." }, { n: '05', t: "Como eu trabalho", d: "Painel de pinceladas + princípios natural, orgânico e artístico." }, { n: '06', t: "Trilha da quinzena", d: "Player com capa, título, artista, datas, play e link do Spotify." }, { n: '07', t: "Fechamento", d: "Paisagem em meio-tom + chamada “Falar com o Leo”." }, { n: '08', t: "Rodapé", d: "Versão em folha, com “Feito à mão em São Paulo”." }] },
+        { id: '9a', ancora: 'p-servicos', tipo: "Página", t: "Serviços", bg: "url('assets/doc-9a.png')", h: '520px', fit: 'cover', href: 'leorib Direcoes.dc.html#9a', objetivo: "Explicar os três serviços de forma objetiva e comparável.", regra: "Cada lista tem 3 itens curtos. Quando os preços forem definidos, substitua o “—” e remova o selo “preço a definir”.", blocos: [{ n: '01', t: "Abertura", d: "Título em 2 linhas + atalhos de textura para cada serviço." }, { n: '02', t: "Bloco de serviço ×3", d: "Cartão de textura, “para quem é”, o que resolve, o que você recebe." }, { n: '03', t: "Investimento", d: "Caixa com “a partir de R$ —”, link para o case e botão." }, { n: '04', t: "Como funciona", d: "Quatro etapas: conversa, proposta, construção e entrega." }, { n: '05', t: "Painel de dúvida", d: "“Não sabe qual escolher?”, com a digital ao fundo." }, { n: '06', t: "Rodapé", d: "Padrão." }] },
+        { id: '10a', ancora: 'p-case', tipo: "Modelo", t: "Case", bg: "url('assets/doc-10a.png')", h: '520px', fit: 'cover', href: 'leorib Direcoes.dc.html#10a', objetivo: "Mostrar o resultado primeiro e o que foi construído logo depois. Lê-se em menos de um minuto.", regra: "Sempre 3 indicadores, cada um com antes e depois. A digital do painel usa o nome do cliente como seed.", blocos: [{ n: '01', t: "Título e etiquetas", d: "Voltar, número do case, título com itálico, cliente, segmento, serviço e prazo." }, { n: '02', t: "Indicadores", d: "Painel folha com a digital do cliente e 3 KPIs com barras de antes e depois." }, { n: '03', t: "Contexto", d: "Problema e solução, uma frase cada." }, { n: '04', t: "O que foi criado", d: "Print grande na moldura de linho + 4 entregáveis numerados." }, { n: '05', t: "Próximo case", d: "Cartão com a textura do serviço do próximo case." }, { n: '06', t: "Rodapé", d: "Padrão." }] },
+        { id: '6b', ancora: 'p-cartao', tipo: "Impresso", t: "Cartão de visitas", bg: "url('assets/doc-6b.png')", h: '270px', fit: 'contain', href: 'leorib Direcoes.dc.html#6b', objetivo: "Levar a névoa do site para o papel.", regra: "Exportar em CMYK com sangria de 3 mm. Manter o texto pequeno só na área clara da frente.", blocos: [{ n: '01', t: "Frente", d: "Névoa folha → papel, digital + leorib., “ateliê digital” na vertical." }, { n: '02', t: "Verso", d: "Papel com grão, manchas de folha borrifada, nome e contatos em mono." }, { n: '03', t: "Especificação", d: "90 × 50 mm · papel pólen ou algodão 300 g · cantos 2 mm · texto mínimo 8 pt." }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

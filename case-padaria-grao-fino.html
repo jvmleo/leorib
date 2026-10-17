@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case 01 · Padaria Grão Fino · leorib</title>
+<meta name="description" content="Planilha de estoque que dá baixa pelas vendas e avisa antes de faltar: 6 horas a menos por semana para a Padaria Grão Fino.">
+<meta name="theme-color" content="#F3F0E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151A15" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/digital.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header wrap">
+  <a class="brand" href="index.html" aria-label="leorib, página inicial"><leo-digital size="36" cor="var(--logo)" cor-semente="var(--logo-seed)"></leo-digital><span>leorib<span class="brand-dot">.</span></span></a>
+  <nav class="nav-pill" aria-label="Principal">
+    <a href="index.html#cases" aria-current="page">Cases</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <a class="btn btn-primary btn-header" href="index.html#contato"><span class="dot" aria-hidden="true"></span>Fale comigo</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div class="mobile-menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="mobile-menu-top">
+    <a class="brand" href="index.html" aria-label="leorib, página inicial"><leo-digital size="26" cor="#F3F0E6" cor-semente="#D08A68"></leo-digital><span>leorib<span class="brand-dot">.</span></span></a>
+    <button class="close-btn" type="button">Fechar</button>
+  </div>
+  <nav aria-label="Principal">
+    <a href="index.html#cases" aria-current="page">Cases</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <a class="btn btn-light" href="index.html#contato">Fale comigo</a>
+</div>
+
+<main id="conteudo">
+
+  <div class="wrap grid case-head">
+    <a class="c-label back" href="index.html#cases">← Todos os cases</a>
+    <div class="c-main stack">
+      <p class="label">[ Case 01 ]</p>
+      <h1 class="h1" data-reveal>Estoque que avisa antes de <em>faltar.</em></h1>
+      <ul class="tags" aria-label="Sobre o projeto">
+        <li class="tag tag-lg tag-strong">Padaria Grão Fino</li>
+        <li class="tag tag-lg tag-outline">Alimentação</li>
+        <li class="tag tag-lg tag-swatch"><span class="sw mat-seixo" aria-hidden="true"></span>Planilhas</li>
+        <li class="tag tag-lg tag-outline">3 semanas · 2026</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="inset">
+    <section class="kpi-painel" aria-labelledby="kpi-titulo">
+      <div class="bg-mark" aria-hidden="true" style="--s:640px"><leo-digital size="640" seed="Padaria Grão Fino" aneis="12" cor="#D6E3C3" semente="false"></leo-digital></div>
+      <div class="top">
+        <h2 class="label" id="kpi-titulo">[ Resultados após 60 dias ]</h2>
+        <span class="caption">Medido com o cliente</span>
+      </div>
+      <div class="kpis">
+        <div class="kpi" data-reveal>
+          <div><span class="valor">6 h</span><span>economizadas por semana</span></div>
+          <div class="bars">
+            <div class="bar"><div class="track"><div class="fill" data-line style="width:100%;background:#B9B5AA"></div></div><span>antes: 7 h</span></div>
+            <div class="bar"><div class="track"><div class="fill" data-line data-delay="300" style="width:14%;background:#8DB06E"></div></div><span>depois: 1 h</span></div>
+          </div>
+        </div>
+        <div class="kpi" data-reveal data-delay="100">
+          <div><span class="valor">4 → 0</span><span>faltas de insumo por mês</span></div>
+          <div class="bars">
+            <div class="bar"><div class="track"><div class="fill" data-line style="width:100%;background:#B9B5AA"></div></div><span>antes: 4</span></div>
+            <div class="bar"><div class="track"><div class="fill" data-line data-delay="300" style="width:2%;background:#8DB06E"></div></div><span>depois: 0</span></div>
+          </div>
+        </div>
+        <div class="kpi" data-reveal data-delay="200">
+          <div><span class="valor">45 → 10</span><span>minutos na contagem diária</span></div>
+          <div class="bars">
+            <div class="bar"><div class="track"><div class="fill" data-line style="width:100%;background:#B9B5AA"></div></div><span>antes: 45 min</span></div>
+            <div class="bar"><div class="track"><div class="fill" data-line data-delay="300" style="width:22%;background:#8DB06E"></div></div><span>depois: 10 min</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="wrap grid contexto" aria-labelledby="contexto-label">
+    <h2 class="c-label label" id="contexto-label">[ Contexto ]</h2>
+    <div class="c-main pair" data-reveal>
+      <div><h3 class="label-sm">Problema</h3><p>Os insumos eram contados à mão no fim do dia, e a farinha acabava no meio da semana.</p></div>
+      <div><h3 class="label-sm">Solução</h3><p>Uma planilha de estoque que dá baixa pelas vendas e mostra um alerta quando é hora de repor.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap grid criado" aria-labelledby="criado-label">
+    <h2 class="c-label label" id="criado-label">[ O que foi criado ]</h2>
+    <figure class="c-main" data-reveal style="display:flex;flex-direction:column;gap:12px">
+      <div class="frame"><div class="frame-print wide">[ print · planilha de estoque, aba principal ]</div></div>
+      <figcaption class="caption">Fig. 01 — dados reais trocados por dados de exemplo</figcaption>
+    </figure>
+    <ol class="c-main criado-lista">
+      <li><div><span class="n">01</span></div><div><span class="t">Estoque com baixa automática</span>Cada venda lançada desconta os insumos da receita.</div></li>
+      <li><div><span class="n">02</span></div><div><span class="t">Alerta de reposição</span>O item fica em destaque quando chega no mínimo definido.</div></li>
+      <li><div><span class="n">03</span></div><div><span class="t">Pedido pronto</span>Lista de compras por fornecedor, pronta para enviar.</div></li>
+      <li><div><span class="n">04</span></div><div><span class="t">Painel da semana</span>Consumo, perdas e gastos numa única tela.</div></li>
+    </ol>
+  </section>
+
+  <div class="inset">
+    <a class="proximo mat-musgo" href="index.html#case-02">
+      <span class="mat-pill">Próximo · Case 02</span>
+      <span class="card">
+        <span class="t">Orçamento pronto em cinco minutos</span>
+        <span class="s">Auto Center Vila Nova · Automações</span>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+
+</main>
+
+<footer class="wrap site-footer">
+  <span class="sig"><leo-digital size="24" cor="var(--logo)" cor-semente="var(--logo-seed)"></leo-digital>leorib © 2026</span>
+  <a href="#conteudo">Voltar ao topo ↑</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>leorib · Planilhas, automações e sites para pequenos negócios</title>
+<meta name="description" content="Leonardo Ribeiro constrói planilhas, automações e sites simples que tiram o trabalho repetitivo da rotina de pequenos negócios.">
+<meta name="theme-color" content="#F3F0E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151A15" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/digital.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header wrap">
+  <a class="brand" href="index.html" aria-label="leorib, página inicial"><leo-digital size="36" cor="var(--logo)" cor-semente="var(--logo-seed)"></leo-digital><span>leorib<span class="brand-dot">.</span></span></a>
+  <nav class="nav-pill" aria-label="Principal">
+    <a href="#cases">Cases</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <a class="btn btn-primary btn-header" href="#contato"><span class="dot" aria-hidden="true"></span>Fale comigo</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div class="mobile-menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="mobile-menu-top">
+    <a class="brand" href="index.html" aria-label="leorib, página inicial"><leo-digital size="26" cor="#F3F0E6" cor-semente="#D08A68"></leo-digital><span>leorib<span class="brand-dot">.</span></span></a>
+    <button class="close-btn" type="button">Fechar</button>
+  </div>
+  <nav aria-label="Principal">
+    <a href="#cases">Cases</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <a class="btn btn-light" href="#contato">Fale comigo</a>
+</div>
+
+<main id="conteudo">
+
+  <div class="inset">
+    <section class="hero" data-reveal aria-labelledby="hero-titulo">
+      <div class="hero-meta">
+        <span>[ Leonardo Ribeiro ]</span>
+        <span>Soluções digitais</span>
+        <span>Pequenos negócios</span>
+      </div>
+      <h1 id="hero-titulo">
+        <span data-reveal data-delay="200">Planilhas,</span>
+        <span data-reveal data-delay="320">automações e sites</span>
+        <span data-reveal data-delay="440">para pequenos <em>negócios.</em></span>
+      </h1>
+      <span class="hero-vertical" aria-hidden="true">ateliê digital</span>
+      <div class="hero-foot">
+        <div class="tags" aria-label="Ferramentas">
+          <span>Excel</span><span>Automações</span><span>Sites</span><span>React</span>
+        </div>
+        <span aria-hidden="true">Role ↓</span>
+      </div>
+    </section>
+  </div>
+
+  <section class="wrap grid intro" aria-labelledby="sobre-label">
+    <p class="c-label label" id="sobre-label">[ Sobre ]</p>
+    <div class="c-main7 intro-body" data-reveal>
+      <p class="lead">Sou Leonardo Ribeiro. Construo ferramentas simples que tiram o trabalho repetitivo da rotina do seu negócio, no Excel que você já usa ou na web.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#cases">Ver cases <span aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary" href="#contato">Pedir orçamento</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="faixas">
+      <a class="faixa mat-seixo" href="servicos.html#planilhas" data-strip data-delay="0"><span class="mat-pill">01 · seixo</span><span class="faixa-nome">planilhas</span></a>
+      <a class="faixa mat-musgo" href="servicos.html#automacoes" data-strip data-delay="120"><span class="mat-pill">02 · musgo</span><span class="faixa-nome">automações</span></a>
+      <a class="faixa mat-folha" href="servicos.html#web" data-strip data-delay="240"><span class="mat-pill">03 · folha</span><span class="faixa-nome">web</span></a>
+    </div>
+    <div class="faixas-legenda"><span>Da pedra à folha · a mesma ideia do símbolo</span><span>seixo → musgo → folha</span></div>
+  </div>
+
+  <section aria-labelledby="servicos-label">
+    <div class="wrap grid sec-head">
+      <h2 class="c-label label" id="servicos-label">[ Serviços ]</h2>
+      <p class="c-main note">Três formas de tirar o trabalho repetitivo da sua semana</p>
+    </div>
+    <div class="wrap">
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <div class="serv-row" data-reveal>
+        <div class="ic"><span class="sw mat-seixo" aria-hidden="true"></span>01</div>
+        <h3>Planilhas</h3>
+        <p>Estoque, caixa, agenda e clientes num lugar só, com fórmulas que fazem a conta por você.</p>
+      </div>
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <div class="serv-row" data-reveal>
+        <div class="ic"><span class="sw mat-musgo" aria-hidden="true"></span>02</div>
+        <h3>Automações</h3>
+        <p>Relatórios, orçamentos e cadastros que se preenchem sozinhos. Menos copiar e colar.</p>
+      </div>
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <div class="serv-row" data-reveal>
+        <div class="ic"><span class="sw mat-folha" aria-hidden="true"></span>03</div>
+        <h3>Web</h3>
+        <p>Sites e páginas simples para o seu cliente encontrar, pedir e agendar.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="respiro" aria-hidden="true">
+    <div class="wrap" style="position:relative;height:100%">
+      <div class="respiro-top"><span><span>02</span><span>Cases</span></span><span>Role para ver ↓</span></div>
+    </div>
+    <div class="respiro-mark" data-reveal><leo-digital size="120" cor="#F3F0E6" cor-semente="#D08A68"></leo-digital></div>
+  </div>
+
+  <section id="cases" aria-labelledby="cases-titulo" style="scroll-margin-top:24px">
+    <div class="wrap grid cases-head">
+      <p class="c-label label">[ Cases ]</p>
+      <h2 class="c-main7 h2" id="cases-titulo" data-reveal>Problemas reais, resolvidos com o que o negócio <em>já usa.</em></h2>
+    </div>
+
+    <div class="wrap">
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <article class="case-row" id="case-01" aria-labelledby="case-01-t">
+        <div class="case-meta" data-reveal>
+          <span class="n">Case 01</span>
+          <span class="cliente">Padaria Grão Fino</span>
+          <div class="tags"><span class="tag tag-outline">Alimentação</span><span class="tag tag-fill">Planilha Excel</span></div>
+        </div>
+        <div class="case-body" data-reveal data-delay="100">
+          <h3 class="h3" id="case-01-t">Estoque que avisa antes de faltar</h3>
+          <dl>
+            <div><dt>Problema</dt><dd>Os insumos eram contados à mão no fim do dia, e a farinha acabava no meio da semana.</dd></div>
+            <div><dt>Solução</dt><dd>Planilha de estoque que dá baixa pelas vendas e mostra um alerta quando é hora de repor.</dd></div>
+            <div class="resultado"><dt>Resultado</dt><dd><span class="num">6 h</span><span>a menos por semana em contagem e pedidos de última hora.</span></dd></div>
+          </dl>
+          <a class="link" href="case-padaria-grao-fino.html">Ler o case completo →</a>
+        </div>
+        <figure class="case-fig" data-reveal data-delay="200">
+          <div class="frame-wrap">
+            <div class="frame"><div class="frame-print">[ print · planilha de estoque ]</div></div>
+            <figcaption class="caption">Fig. 01 — planilha de estoque</figcaption>
+          </div>
+        </figure>
+      </article>
+
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <article class="case-row" id="case-02" aria-labelledby="case-02-t">
+        <div class="case-meta" data-reveal>
+          <span class="n">Case 02</span>
+          <span class="cliente">Auto Center Vila Nova</span>
+          <div class="tags"><span class="tag tag-outline">Oficina mecânica</span><span class="tag tag-fill">Automação Excel</span></div>
+        </div>
+        <div class="case-body" data-reveal data-delay="100">
+          <h3 class="h3" id="case-02-t">Orçamento pronto em cinco minutos</h3>
+          <dl>
+            <div><dt>Problema</dt><dd>Cada orçamento era montado do zero, consultando preços em cadernos diferentes.</dd></div>
+            <div><dt>Solução</dt><dd>Gerador de orçamentos com catálogo de peças e mão de obra, que cria o PDF em um clique.</dd></div>
+            <div class="resultado"><dt>Resultado</dt><dd><span class="num">40 → 5 min</span><span>por orçamento, com preços sempre atualizados.</span></dd></div>
+          </dl>
+          <span class="case-soon">Case completo em breve</span>
+        </div>
+        <figure class="case-fig" data-reveal data-delay="200">
+          <div class="frame-wrap">
+            <div class="frame"><div class="frame-print">[ print · gerador de orçamentos ]</div></div>
+            <figcaption class="caption">Fig. 02 — gerador de orçamentos</figcaption>
+          </div>
+        </figure>
+      </article>
+
+      <div class="rule" data-line style="transform-origin:left"></div>
+      <article class="case-row" id="case-03" aria-labelledby="case-03-t">
+        <div class="case-meta" data-reveal>
+          <span class="n">Case 03</span>
+          <span class="cliente">Floricultura Jardim Alto</span>
+          <div class="tags"><span class="tag tag-outline">Varejo</span><span class="tag tag-fill">Site</span></div>
+        </div>
+        <div class="case-body" data-reveal data-delay="100">
+          <h3 class="h3" id="case-03-t">Catálogo online com pedido pelo WhatsApp</h3>
+          <dl>
+            <div><dt>Problema</dt><dd>Clientes pediam fotos e preços um por um pelo celular, o dia inteiro.</dd></div>
+            <div><dt>Solução</dt><dd>Site leve com catálogo e preços, e um botão que já abre o pedido no WhatsApp.</dd></div>
+            <div class="resultado"><dt>Resultado</dt><dd><span class="num">1 em 3</span><span>pedidos agora chega pelo site, com o produto já escolhido.</span></dd></div>
+          </dl>
+          <span class="case-soon">Case completo em breve</span>
+        </div>
+        <figure class="case-fig" data-reveal data-delay="200">
+          <div class="frame-wrap">
+            <div class="frame"><div class="frame-print">[ print · site da floricultura ]</div></div>
+            <figcaption class="caption">Fig. 03 — site da floricultura</figcaption>
+          </div>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <div class="inset">
+    <section class="contato" id="contato" aria-labelledby="contato-titulo">
+      <div class="orb" data-orb aria-hidden="true"></div>
+      <div class="contato-texto" data-reveal>
+        <p class="label">[ Contato ]</p>
+        <h2 class="h2" id="contato-titulo">Me conte o que toma tempo no seu <em>negócio.</em></h2>
+        <div class="contato-links">
+          <a href="mailto:oi@leorib.com.br"><span>E-mail</span><span>oi@leorib.com.br ↗</span></a>
+          <a href="https://wa.me/5511900000000" target="_blank" rel="noopener"><span>WhatsApp</span><span>(11) 90000-0000 ↗</span></a>
+        </div>
+      </div>
+      <form class="form" data-contato data-email="oi@leorib.com.br" novalidate>
+        <p class="full">Respondo em até um dia útil, com uma proposta clara e sem termos técnicos.</p>
+        <label class="field">Seu nome<input type="text" name="nome" autocomplete="name"><span class="err">Diga como posso te chamar.</span></label>
+        <label class="field">E-mail ou WhatsApp<input type="text" name="contato" autocomplete="email"><span class="err">Deixe um e-mail ou número para eu responder.</span></label>
+        <label class="field full">O que você quer resolver?<textarea name="mensagem" rows="4"></textarea><span class="err">Conte em uma frase o que toma tempo.</span></label>
+        <button class="btn btn-primary" type="submit">Enviar mensagem →</button>
+        <p class="form-status full" role="status"></p>
+      </form>
+    </section>
+  </div>
+
+</main>
+
+<footer class="wrap site-footer">
+  <span class="sig"><leo-digital size="24" cor="var(--logo)" cor-semente="var(--logo-seed)"></leo-digital>leorib © 2026</span>
+  <span class="swatches" aria-hidden="true"><span class="mat-seixo"></span><span class="mat-musgo"></span><span class="mat-folha"></span></span>
+  <a href="#conteudo">Voltar ao topo ↑</a>
+</footer>
+</body>
+</html>

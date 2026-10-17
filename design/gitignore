@@ -1,0 +1,25 @@
+# Dependências (para quando migrar para React + Vite)
+node_modules/
+
+# Build
+dist/
+build/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+npm-debug.log*

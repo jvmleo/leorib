@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;700&amp;family=Atkinson+Hyperlegible+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#CFCBBF;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#3F4F3A}
+a:hover{color:#22261F}
+:focus-visible{outline:3px solid #3F4F3A;outline-offset:3px}
+@keyframes eq{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px;font-family:'Atkinson Hyperlegible Next',sans-serif;color:#22261F;border-bottom:1px solid #B9B5AA">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:64ch">
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;letter-spacing:.08em;text-transform:uppercase">[ Rodada 10 ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:3.5rem;line-height:1.05">Página de <em style="font-style:italic">case</em></h1>
+    <p style="margin:0;font-size:1.25rem;line-height:1.6">Um modelo fixo para todos os cases: primeiro os números depois da solução, em seguida o contexto em duas linhas e o que foi criado. Exemplo com a Padaria Grão Fino; os números são ilustrativos.</p>
+  </div>
+
+  <div id="10a" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">10a</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Case · modelo</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">Ordem fixa: título → indicadores → problema e solução → o que foi criado → próximo case. Lê-se em menos de um minuto.</p>
+      </div>
+      <button type="button" onClick="{{ replay }}" style="min-height:48px;padding:0 20px;background:transparent;border:1.5px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#22261F;cursor:pointer">Rever animações</button>
+    </div>
+
+    <div ref="{{ boardRef10 }}" data-screen-label="10a Case" style="position:relative;isolation:isolate;width:1280px;background:#F3F0E6;color:#22261F;font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;container-type:inline-size;overflow:hidden">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 64px">
+        <a href="#" style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.125rem;line-height:1;color:#2B5633;text-decoration:none"><dc-import name="Digital" size="{{ 36 }}" seed="leorib" cor="#2B5633" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></a>
+        <nav style="display:flex;gap:4px;padding:4px;border:1px solid #B9B5AA;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.06em;text-transform:uppercase">
+          <a href="#" aria-current="page" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#22261F;color:#F3F0E6;text-decoration:none">Cases</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Serviços</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Sobre</a>
+        </nav>
+        <a href="#" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;text-decoration:none;font-weight:500" style-hover="background:#22261F;color:#F3F0E6">Fale comigo</a>
+      </header>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;padding:64px 64px 64px">
+        <a href="#" style="grid-column:1 / span 3;align-self:start;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50;text-decoration:none;padding-top:16px" style-hover="color:#22261F">← Todos os cases</a>
+        <div style="grid-column:5 / span 8;display:flex;flex-direction:column;gap:24px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Case 01 ]</p>
+          <h1 data-reveal="" style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2.75rem,1.5rem + 4cqi,5rem);line-height:1.03;letter-spacing:-.02em;text-wrap:balance;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Estoque que avisa antes de <em style="font-style:italic">faltar.</em></h1>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Padaria Grão Fino</span>
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid #575A50;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">Alimentação</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 16px 0 6px;border-radius:999px;background:#E6E2D6;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem"><span aria-hidden="true" style="width:24px;height:24px;border-radius:50%;background-color:#B3AEA1;background-image:{{ faixas6.0.tex }}"></span>Planilhas</span>
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid #575A50;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">3 semanas · 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative;isolation:isolate;overflow:hidden;margin:0 24px;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(160deg,#1F3A25 0%,#2B5633 55%,#3B6B43 100%);color:#F3F0E6;padding:48px 40px 40px;display:flex;flex-direction:column;gap:32px">
+        <div aria-hidden="true" style="position:absolute;z-index:-1;left:-200px;bottom:-320px;opacity:.28"><dc-import name="Digital" size="{{ 640 }}" seed="Padaria Grão Fino" aneis="{{ 12 }}" cor="#D6E3C3" semente="{{ false }}" hint-size="640px,640px"></dc-import></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#D6E3C3">[ Resultados após 60 dias ]</p>
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#D6E3C3">Medido com o cliente</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="3">
+            <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;padding:28px;border-radius:20px;background:rgba(21,26,21,.28);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(3rem,2rem + 3cqi,4.5rem);line-height:1;letter-spacing:-.02em">{{ k.valor }}</span>
+                <span style="font-size:1.125rem">{{ k.rotulo }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#D6E3C3">
+                <div style="display:flex;align-items:center;gap:12px"><div style="flex:1;height:8px;border-radius:999px;background:rgba(214,227,195,.15)"><div data-line="" style="height:100%;width:{{ k.pa }};border-radius:999px;background:#B9B5AA;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div></div><span style="flex:none;min-width:120px;white-space:nowrap">{{ k.antes }}</span></div>
+                <div style="display:flex;align-items:center;gap:12px"><div style="flex:1;height:8px;border-radius:999px;background:rgba(214,227,195,.15)"><div data-line="" data-delay="300" style="height:100%;width:{{ k.pd }};min-width:8px;border-radius:999px;background:#8DB06E;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div></div><span style="flex:none;min-width:120px;white-space:nowrap">{{ k.depois }}</span></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:96px 64px 80px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Contexto ]</p>
+        <div data-reveal="" style="grid-column:5 / span 8;display:grid;grid-template-columns:1fr 1fr;gap:32px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #22261F;padding-top:16px">
+            <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Problema</span>
+            <p style="margin:0">Os insumos eram contados à mão no fim do dia, e a farinha acabava no meio da semana.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #22261F;padding-top:16px">
+            <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Solução</span>
+            <p style="margin:0">Uma planilha de estoque que dá baixa pelas vendas e mostra um alerta quando é hora de repor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;padding:0 64px 96px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ O que foi criado ]</p>
+        <figure data-reveal="" style="grid-column:5 / span 8;margin:0;display:flex;flex-direction:column;gap:12px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div style="border-radius:20px;overflow:hidden;background-color:#E6E2D6;background-image:{{ tx.linho }};padding:20px">
+            <div style="aspect-ratio:16 / 9;border-radius:10px;background:repeating-linear-gradient(135deg,#F3F0E6 0 12px,#ECE8DC 12px 13px);box-shadow:0 1px 0 #B9B5AA,0 16px 32px -20px rgba(34,38,31,.45);display:grid;place-items:center">
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">[ print · planilha de estoque, aba principal ]</span>
+            </div>
+          </div>
+          <figcaption style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">Fig. 01 — dados reais trocados por dados de exemplo</figcaption>
+        </figure>
+        <div style="grid-column:5 / span 8;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px">
+          <sc-for list="{{ criado }}" as="c" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-top:1px solid #B9B5AA">
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#2B5633">{{ c.n }}</span>
+              <div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:700">{{ c.t }}</span><span>{{ c.d }}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <a href="#" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;margin:0 24px 24px;padding:32px 40px;border-radius:28px;background-color:#8DB06E;background-image:{{ faixas6.1.tex }};color:#22261F;text-decoration:none;transition:transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-4px)">
+        <span style="grid-column:1 / span 3;justify-self:start;padding:4px 12px;border-radius:999px;background:rgba(243,240,230,.82);font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Próximo · Case 02</span>
+        <span style="grid-column:4 / span 7;display:flex;flex-direction:column;gap:4px;padding:8px 20px;border-radius:16px;background:rgba(243,240,230,.82)">
+          <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2rem;line-height:1.15">Orçamento pronto em cinco minutos</span>
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">Auto Center Vila Nova · Automações</span>
+        </span>
+        <span style="grid-column:12 / span 1;justify-self:end;width:56px;height:56px;border-radius:50%;background:#22261F;color:#F3F0E6;display:grid;place-items:center;font-size:1.25rem">→</span>
+      </a>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 64px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">
+        <span style="display:flex;align-items:center;gap:12px"><dc-import name="Digital" size="{{ 24 }}" seed="leorib" cor="#2B5633" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+        <a href="#" style="color:#575A50">Voltar ao topo ↑</a>
+      </footer>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px;font-family:'Atkinson Hyperlegible Next',sans-serif;color:#22261F;border-bottom:1px solid #B9B5AA">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:64ch">
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;letter-spacing:.08em;text-transform:uppercase">[ Rodada 9 ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:3.5rem;line-height:1.05">Página <em style="font-style:italic">Serviços</em></h1>
+    <p style="margin:0;font-size:1.25rem;line-height:1.6">Três serviços para começar: planilhas, automações e web. As faixas de categoria da <a href="#6a">6a</a> e da <a href="#7a">7a</a> também passaram para três: seixo, musgo e folha. Os preços estão marcados como “a definir”.</p>
+  </div>
+
+  <div id="9a" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">9a</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Serviços</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">Direto ao ponto: para quem é, o que resolve, o que a pessoa recebe e quanto custa. Os três serviços seguem a mesma estrutura, para comparar com uma olhada.</p>
+      </div>
+    </div>
+
+    <div ref="{{ boardRef9 }}" data-screen-label="9a Serviços" style="position:relative;isolation:isolate;width:1280px;background:#F3F0E6;color:#22261F;font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;container-type:inline-size;overflow:hidden">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 64px">
+        <a href="#" style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.125rem;line-height:1;color:#2B5633;text-decoration:none"><dc-import name="Digital" size="{{ 36 }}" seed="leorib" cor="#2B5633" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></a>
+        <nav style="display:flex;gap:4px;padding:4px;border:1px solid #B9B5AA;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.06em;text-transform:uppercase">
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Cases</a>
+          <a href="#" aria-current="page" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#22261F;color:#F3F0E6;text-decoration:none">Serviços</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Sobre</a>
+        </nav>
+        <a href="#" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;text-decoration:none;font-weight:500" style-hover="background:#22261F;color:#F3F0E6">Fale comigo</a>
+      </header>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:48px;padding:96px 64px 80px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:16px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Serviços ]</p>
+        <div style="grid-column:5 / span 8;display:flex;flex-direction:column;gap:24px">
+          <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2.75rem,1.5rem + 4cqi,5rem);line-height:1.03;letter-spacing:-.02em;text-wrap:balance">
+            <span data-reveal="" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Três jeitos de tirar</span>
+            <span data-reveal="" data-delay="120" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">trabalho da sua <em style="font-style:italic">rotina.</em></span>
+          </h1>
+          <p data-reveal="" data-delay="240" style="margin:0;font-size:clamp(1.25rem,1rem + .6cqi,1.5rem);line-height:1.5;max-width:40ch;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Escolha pelo problema que você quer resolver. Se não souber qual, a gente descobre junto na primeira conversa.</p>
+        </div>
+        <nav aria-label="Serviços" style="grid-column:5 / span 8;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+          <sc-for list="{{ servPg }}" as="s" hint-placeholder-count="3">
+            <a href="#" data-strip="" style="position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:16px;min-height:112px;padding:16px 20px 20px;border-radius:16px;background-color:{{ s.cor }};background-image:{{ s.tex }};color:{{ s.ink }};text-decoration:none;transition:clip-path 1s cubic-bezier(.2,.7,.2,1),transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-3px)">
+              <span style="padding:4px 12px;border-radius:999px;background:{{ s.pill }};font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;white-space:nowrap">{{ s.n }} · {{ s.mat }}</span>
+              <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.5rem;line-height:1;white-space:nowrap">{{ s.nome }} ↓</span>
+            </a>
+          </sc-for>
+        </nav>
+      </div>
+
+      <sc-for list="{{ servPg }}" as="s" hint-placeholder-count="3">
+        <div style="margin:0 64px">
+          <div data-line="" style="height:1px;background:#22261F;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+          <article style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 0 96px">
+            <div data-reveal="" style="grid-column:1 / span 3;position:relative;min-height:380px;border-radius:20px;overflow:hidden;background-color:{{ s.cor }};background-image:{{ s.tex }};color:{{ s.ink }};display:flex;flex-direction:column;justify-content:space-between;padding:20px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <span style="align-self:flex-start;padding:4px 12px;border-radius:999px;background:{{ s.pill }};font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ s.n }} · {{ s.mat }}</span>
+              <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.25rem;line-height:1">{{ s.nome }}</span>
+            </div>
+            <div data-reveal="" data-delay="120" style="grid-column:5 / span 8;display:flex;flex-direction:column;gap:32px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2.25rem,1.4rem + 2.6cqi,3.75rem);line-height:1.05;letter-spacing:-.01em">{{ s.nome }}</h2>
+                <p style="margin:0;font-size:1.375rem;line-height:1.5;max-width:40ch">{{ s.para }}</p>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">O que resolve</span>
+                  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #B9B5AA">
+                    <sc-for list="{{ s.resolve }}" as="i" hint-placeholder-count="3"><li style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #B9B5AA"><span aria-hidden="true" style="flex:none;margin-top:9px;width:8px;height:8px;border-radius:46% 54% 42% 58% / 52% 44% 56% 48%;background:#2B5633"></span>{{ i }}</li></sc-for>
+                  </ul>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">O que você recebe</span>
+                  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #B9B5AA">
+                    <sc-for list="{{ s.recebe }}" as="i" hint-placeholder-count="3"><li style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #B9B5AA"><span aria-hidden="true" style="flex:none;font-family:'Atkinson Hyperlegible Mono',monospace;color:#2B5633">✓</span>{{ i }}</li></sc-for>
+                  </ul>
+                </div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;padding:20px 24px;border-radius:16px;background:#E6E2D6">
+                <div style="display:flex;flex-direction:column">
+                  <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Investimento</span>
+                  <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.75rem;line-height:1.2">a partir de R$ —<span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50;margin-left:12px">[ preço a definir ]</span></span>
+                </div>
+                <div style="display:flex;align-items:center;gap:24px">
+                  <a href="#" style="color:#2B5633;font-weight:500;text-underline-offset:4px">Ver case: {{ s.caso }}</a>
+                  <a href="#" style="display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;text-decoration:none;font-weight:500" style-hover="background:#22261F;color:#F3F0E6">{{ s.cta }} →</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </sc-for>
+
+      <div data-line="" style="height:1px;margin:0 64px;background:#22261F;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px;padding:48px 64px 112px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Como funciona ]</p>
+        <div style="grid-column:4 / span 9;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+          <sc-for list="{{ etapas }}" as="e" hint-placeholder-count="4">
+            <div data-reveal="" style="display:flex;flex-direction:column;gap:8px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">{{ e.n }}</span>
+              <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.625rem;line-height:1.2;color:#2B5633">{{ e.t }}</span>
+              <span style="max-width:24ch">{{ e.d }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position:relative;isolation:isolate;overflow:hidden;margin:0 24px 24px;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(200deg,#2B5633 0%,#2B5633 60%,#3B6B43 100%);color:#F3F0E6;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:72px 40px;align-items:center">
+        <div aria-hidden="true" style="position:absolute;z-index:-1;right:-140px;top:-180px;opacity:.35"><dc-import name="Digital" size="{{ 560 }}" seed="leorib" aneis="{{ 11 }}" cor="#D6E3C3" semente="{{ false }}" hint-size="560px,560px"></dc-import></div>
+        <div style="grid-column:1 / span 7;display:flex;flex-direction:column;gap:16px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#D6E3C3">[ Não sabe qual escolher? ]</p>
+          <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.25rem);line-height:1.1;text-wrap:balance">Me conte o problema. Eu indico o <em style="font-style:italic">caminho.</em></h2>
+        </div>
+        <div style="grid-column:9 / span 4;display:flex;justify-content:flex-end">
+          <a href="#" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;border-radius:999px;background:#F3F0E6;color:#2B5633;text-decoration:none;font-weight:700" style-hover="background:#D6E3C3;color:#22261F">Falar com o Leo →</a>
+        </div>
+      </div>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 64px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">
+        <span style="display:flex;align-items:center;gap:12px"><dc-import name="Digital" size="{{ 24 }}" seed="leorib" cor="#2B5633" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+        <span aria-hidden="true" style="display:flex;gap:6px"><sc-for list="{{ faixas6 }}" as="f" hint-placeholder-count="3"><span style="width:48px;height:20px;border-radius:999px;background-color:{{ f.cor }};background-image:{{ f.tex }}"></span></sc-for></span>
+        <a href="#" style="color:#575A50">Voltar ao topo ↑</a>
+      </footer>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px;font-family:'Atkinson Hyperlegible Next',sans-serif;color:#22261F;border-bottom:1px solid #B9B5AA">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:64ch">
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;letter-spacing:.08em;text-transform:uppercase">[ Rodada 8 ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:3.5rem;line-height:1.05">Página <em style="font-style:italic">Sobre</em> e a digital de árvore</h1>
+    <p style="margin:0;font-size:1.25rem;line-height:1.6">A página Sobre segue a <a href="#6a">6a</a> e usa os efeitos das referências: retrato em duotom verde, anéis de árvore, pinceladas, meio-tom de paisagem e uma trilha da quinzena. Ao lado, a sua ideia de símbolo.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:96px;align-items:flex-start">
+
+  <div id="8a" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">8a</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Sobre · Leo</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">A página mais pessoal do site, com mais arte e um pouco mais de ritmo. A estrutura continua linear e o texto nunca fica sobre textura.</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Passe o mouse no retrato para ver a foto original · Toque no play da trilha</p>
+      </div>
+      <button type="button" onClick="{{ replay }}" style="min-height:48px;padding:0 20px;background:transparent;border:1.5px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#22261F;cursor:pointer">Rever animações</button>
+    </div>
+
+    <div ref="{{ boardRef8 }}" data-screen-label="8a Sobre" style="position:relative;isolation:isolate;width:1280px;background:#F3F0E6;color:#22261F;font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;container-type:inline-size;overflow:hidden">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 64px">
+        <a href="#" style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.125rem;line-height:1;color:#2B5633;text-decoration:none"><dc-import name="Digital" size="{{ 36 }}" seed="leorib" cor="#2B5633" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></a>
+        <nav style="display:flex;gap:4px;padding:4px;border:1px solid #B9B5AA;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.06em;text-transform:uppercase">
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Cases</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none" style-hover="background:#E6E2D6">Serviços</a>
+          <a href="#" aria-current="page" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#22261F;color:#F3F0E6;text-decoration:none">Sobre</a>
+        </nav>
+        <a href="#" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;text-decoration:none;font-weight:500" style-hover="background:#22261F;color:#F3F0E6">Fale comigo</a>
+      </header>
+
+      <div style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:80px 64px 96px;align-items:end">
+        <div aria-hidden="true" data-orb="" style="position:absolute;z-index:-1;right:-260px;top:-140px;opacity:.5;transition:opacity 2.2s cubic-bezier(.2,.7,.2,1),transform 2.2s cubic-bezier(.2,.7,.2,1)"><dc-import name="Digital" size="{{ 980 }}" seed="leo" aneis="{{ 14 }}" cor="#C3D6A4" semente="{{ false }}" hint-size="980px,980px"></dc-import></div>
+        <div style="grid-column:1 / span 6;display:flex;flex-direction:column;gap:32px;padding-bottom:16px">
+          <p data-reveal="" style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">[ Sobre ]</p>
+          <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(3rem,1.5rem + 5.4cqi,7rem);line-height:.98;letter-spacing:-.025em">
+            <span data-reveal="" data-delay="0" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Oi, eu sou</span>
+            <span data-reveal="" data-delay="140" style="display:block;color:#2B5633;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">o <em style="font-style:italic">Leo.</em></span>
+          </h1>
+          <p data-reveal="" data-delay="260" style="margin:0;font-size:clamp(1.25rem,1rem + .6cqi,1.5rem);line-height:1.5;max-width:30ch;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Leonardo Ribeiro, 23 anos, paulistano. Crio soluções digitais confortáveis e autênticas para pequenos negócios.</p>
+        </div>
+        <figure data-reveal="" data-delay="200" style="grid-column:7 / span 6;margin:0;display:flex;flex-direction:column;gap:12px;align-items:flex-end;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div style="position:relative;width:500px;height:580px;border-radius:46% 54% 42% 58% / 52% 44% 56% 48%;overflow:hidden;background:#2B5633">
+            <img src="assets/leo.jpeg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.1);filter:grayscale(1) contrast(1.25) brightness(1.05);mix-blend-mode:screen">
+            <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(43,86,51,.55) 0 1.1px,transparent 1.6px);background-size:5px 5px;mix-blend-mode:multiply"></div>
+            <img src="assets/leo.jpeg" alt="Retrato de Leonardo Ribeiro, de boné preto e óculos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.1);opacity:0;transition:opacity .7s cubic-bezier(.2,.7,.2,1)" style-hover="opacity:1">
+          </div>
+          <figcaption style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">Fig. 01 — Leo, São Paulo</figcaption>
+        </figure>
+      </div>
+
+      <div style="margin:0 64px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #22261F;border-bottom:1px solid #B9B5AA">
+        <div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px 20px 0"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Idade</span><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:1.75rem;line-height:1.2">23 anos</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;border-left:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">De onde</span><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:1.75rem;line-height:1.2">São Paulo, SP</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;border-left:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Começo</span><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:1.75rem;line-height:1.2">aos 14 anos</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;border-left:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Estudando</span><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-size:1.75rem;line-height:1.2">Web Design</span></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:112px 64px 96px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:8px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ História ]</p>
+        <div data-reveal="" style="grid-column:5 / span 7;display:flex;flex-direction:column;gap:24px;max-width:64ch;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <p style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(1.5rem,1rem + 1.1cqi,2rem);line-height:1.35;text-wrap:pretty">Sou o Leonardo, mais conhecido como “Leo”. Tenho 23 anos, nasci e cresci na capital paulista.</p>
+          <p style="margin:0">Desde novo, sempre fui muito curioso e atento a novas possibilidades. Aos 14 anos, comecei a fazer cursos voltados para marketing e projetos web e, desde então, sigo estudando nessa linha.</p>
+          <p style="margin:0">Gosto muito de música e de arte em geral, tenho amplo conhecimento em design e busco criar soluções confortáveis e autênticas para os meus clientes. Sou estudante de Web Design e quero ajudar quem precisa, pois a tecnologia já é o agora.</p>
+          <p style="margin:0">A leorib nasce dessa mistura. Eu trato cada projeto como um ateliê trata uma peça: observo o negócio, entendo o ritmo dele e construo a ferramenta a partir do que já existe, como uma planta que cresce no próprio solo.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:0 64px 112px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Caminho ]</p>
+        <div style="grid-column:4 / span 9;position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:40px">
+          <div data-line="" aria-hidden="true" style="position:absolute;left:0;right:0;top:11px;height:2px;background-image:repeating-linear-gradient(90deg,#2B5633 0 10px,transparent 10px 14px);transform-origin:left;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)"></div>
+          <sc-for list="{{ caminho }}" as="p" hint-placeholder-count="4">
+            <div style="position:relative;display:flex;flex-direction:column;gap:8px">
+              <span aria-hidden="true" style="position:absolute;top:-36px;left:0;width:16px;height:16px;border-radius:46% 54% 42% 58% / 52% 44% 56% 48%;background:#2B5633;box-shadow:0 0 0 5px #F3F0E6"></span>
+              <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.5rem;line-height:1.2;color:#2B5633">{{ p.quando }}</span>
+              <span style="max-width:24ch">{{ p.texto }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin:0 24px;border-radius:28px;overflow:hidden;background:#E6E2D6">
+        <div aria-hidden="true" data-strip="" style="grid-column:1 / span 5;min-height:520px;background-color:#F3F0E6;background-image:{{ tx.grao }},radial-gradient(ellipse 6px 15px at 50% 50%,rgba(43,86,51,.85) 0 68%,transparent 74%),radial-gradient(ellipse 7px 16px at 50% 50%,rgba(141,176,110,.85) 0 68%,transparent 74%),radial-gradient(ellipse 6px 14px at 50% 50%,rgba(94,138,78,.75) 0 68%,transparent 74%);background-size:auto,22px 34px,26px 38px,30px 30px;background-position:0 0,0 0,11px 17px,5px 9px;transition:clip-path 1.4s cubic-bezier(.2,.7,.2,1)"></div>
+        <div style="grid-column:6 / span 7;padding:64px 56px 64px 32px;display:flex;flex-direction:column;gap:32px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Como eu trabalho ]</p>
+          <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.4cqi,3.25rem);line-height:1.1;text-wrap:balance">Natural, orgânico e feito com <em style="font-style:italic">olhar de artista.</em></h2>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-top:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#2B5633">01 · natural</span><span>Ferramentas simples, que não brigam com a sua rotina e que qualquer pessoa da equipe consegue usar.</span></div>
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-top:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#2B5633">02 · orgânico</span><span>Cada solução cresce a partir do jeito que o seu negócio já funciona, sem modelo de prateleira.</span></div>
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-top:1px solid #B9B5AA;border-bottom:1px solid #B9B5AA"><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#2B5633">03 · artístico</span><span>Cuidado com a forma, porque o que é bonito e claro também é mais fácil de usar.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:112px 64px">
+        <div style="grid-column:1 / span 3;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Trilha da quinzena ]</p>
+          <p style="margin:0;max-width:22ch;color:#575A50">O que está tocando enquanto eu trabalho. Muda a cada duas semanas.</p>
+        </div>
+        <div data-reveal="" style="grid-column:5 / span 8;position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(160deg,#1F3A25 0%,#2B5633 55%,#3B6B43 100%);color:#F3F0E6;display:grid;grid-template-columns:240px 1fr;gap:40px;padding:40px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <div aria-hidden="true" style="position:absolute;z-index:-1;right:-120px;bottom:-200px;width:560px;height:520px;background-image:{{ tx.graoLuz }},radial-gradient(40% 36% at 46% 50%,rgba(141,176,110,.8) 0,rgba(141,176,110,0) 100%),radial-gradient(26% 30% at 70% 34%,rgba(214,227,195,.5) 0,rgba(214,227,195,0) 100%);-webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent 100%);mask-image:radial-gradient(closest-side,#000 40%,transparent 100%)"></div>
+          <div style="width:240px;height:240px;border-radius:16px;background:repeating-linear-gradient(135deg,#D6E3C3 0 12px,#C9D8B4 12px 13px);display:grid;place-items:center;padding:16px;box-shadow:0 24px 40px -24px rgba(0,0,0,.6)">
+            <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#22261F;text-align:center">[ capa do álbum ]</span>
+          </div>
+          <div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-width:0">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#D6E3C3">
+              <span>05 – 18 out 2026</span>
+              <span style="display:flex;align-items:center;gap:10px">{{ eq }}<span>{{ playLabel }}</span></span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:2.75rem;line-height:1.05">Título da música</span>
+              <span style="font-size:1.125rem;color:#D6E3C3">Nome do artista · Álbum</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;align-items:center;gap:12px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#D6E3C3">
+                <span style="width:40px">{{ tempo }}</span>
+                <div style="flex:1;height:4px;border-radius:999px;background:rgba(214,227,195,.3);overflow:hidden"><div style="height:100%;width:{{ progW }};background:#D6E3C3;border-radius:999px;transition:width .4s linear"></div></div>
+                <span style="width:40px;text-align:right">3:34</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:16px">
+                <button type="button" onClick="{{ toggleMusica }}" aria-label="{{ playLabel }}" style="width:56px;height:56px;border-radius:50%;border:0;background:#F3F0E6;color:#2B5633;font-size:1rem;cursor:pointer;display:grid;place-items:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.06)">{{ playIcon }}</button>
+                <a href="#" style="display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border:1.5px solid #D6E3C3;border-radius:999px;color:#F3F0E6;text-decoration:none;font-weight:500" style-hover="background:rgba(214,227,195,.15);color:#F3F0E6">Ouvir no Spotify ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative;height:520px;overflow:hidden">
+        <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,#2B5633 0 1.5px,transparent 2px),radial-gradient(circle,#5E8A4E 0 1.2px,transparent 1.7px);background-size:6px 6px,9px 9px;background-position:0 0,3px 4px;-webkit-mask-image:linear-gradient(180deg,transparent 0%,transparent 34%,rgba(0,0,0,.5) 50%,#000 72%);mask-image:linear-gradient(180deg,transparent 0%,transparent 34%,rgba(0,0,0,.5) 50%,#000 72%)"></div>
+        <div style="position:absolute;left:64px;right:64px;top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px">
+          <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Vamos conversar ]</p>
+          <div style="grid-column:5 / span 8;display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+            <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.5rem);line-height:1.1;text-wrap:balance">Bora construir algo que seja a <em style="font-style:italic">cara</em> do seu negócio?</h2>
+            <a href="#" style="display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 28px;background:#2B5633;color:#F3F0E6;border-radius:999px;text-decoration:none;font-weight:500" style-hover="background:#22261F;color:#F3F0E6">Falar com o Leo →</a>
+          </div>
+        </div>
+      </div>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 64px;background:#2B5633;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#D6E3C3">
+        <span style="display:flex;align-items:center;gap:12px"><dc-import name="Digital" size="{{ 24 }}" seed="leorib" cor="#D6E3C3" corSemente="#D08A68" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+        <span>Feito à mão em São Paulo</span>
+        <a href="#" style="color:#D6E3C3">Voltar ao topo ↑</a>
+      </footer>
+    </div>
+  </div>
+
+  <div id="8b" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">8b</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Digital de árvore</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">Anéis de tronco que se fecham como uma impressão digital, com uma semente de argila no centro. Cada cliente pode ganhar a própria digital, gerada a partir do nome do negócio.</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Gerado por código: mesma regra, desenho diferente para cada nome · abaixo de 64 px os anéis viram traço contínuo</p>
+      </div>
+    </div>
+
+    <div data-screen-label="8b Digital de árvore" style="font-size:1.125rem;line-height:1.6;width:1280px;background:#F3F0E6;border-radius:28px;overflow:hidden;display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:96px 64px;align-items:center;background-image:{{ tx.grao }}">
+        <div style="grid-column:1 / span 6;display:grid;place-items:center;min-height:480px">
+          <dc-import name="Digital" size="{{ 400 }}" seed="leorib" aneis="{{ 10 }}" hint-size="400px,400px"></dc-import>
+        </div>
+        <div style="grid-column:8 / span 5;display:flex;flex-direction:column;gap:24px">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Símbolo · digital de árvore ]</p>
+          <p style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:2.25rem;line-height:1.15">Cada solução é <em style="font-style:italic">única.</em></p>
+          <p style="margin:0;max-width:40ch">Os anéis de uma árvore e as linhas de um dedo registram uma história que não se repete. O símbolo junta os dois: anéis que crescem a partir de uma semente, como um projeto que cresce a partir do seu negócio.</p>
+        </div>
+      </div>
+      <div style="height:1px;margin:0 64px;background:#B9B5AA"></div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 64px 64px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Uma por cliente ]</p>
+        <div style="grid-column:4 / span 9;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+          <sc-for list="{{ digitais }}" as="d" hint-placeholder-count="3">
+            <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+              <dc-import name="Digital" size="{{ 160 }}" seed="{{ d.seed }}" aneis="{{ 7 }}" hint-size="160px,160px"></dc-import>
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem">{{ d.nome }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 8px 8px">
+        <div style="position:relative;aspect-ratio:1;border-radius:20px;background-color:#2B5633;background-image:{{ tx.graoLuz }};display:grid;place-items:center">
+          <dc-import name="Digital" size="{{ 220 }}" seed="leorib" aneis="{{ 8 }}" cor="#D6E3C3" corSemente="#D08A68" hint-size="220px,220px"></dc-import>
+          <span style="position:absolute;left:24px;bottom:20px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#F3F0E6">Negativo · sobre folha</span>
+        </div>
+        <div style="position:relative;aspect-ratio:1;border-radius:20px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(165deg,#2B5633 0%,#2B5633 40%,#5E8A4E 64%,#C3D6A4 84%,#E6E2D6 100%);display:grid;place-items:center">
+          <div style="width:216px;height:216px;border-radius:30%;background:#F3F0E6;display:grid;place-items:center;box-shadow:0 30px 50px -30px rgba(34,38,31,.6)">
+            <dc-import name="Digital" size="{{ 136 }}" seed="leorib" aneis="{{ 6 }}" hint-size="136px,136px"></dc-import>
+          </div>
+          <span style="position:absolute;left:24px;bottom:20px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#22261F">Ícone · avatar e app</span>
+        </div>
+        <div style="position:relative;aspect-ratio:1;border-radius:20px;background:#E6E2D6;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px">
+          <div style="display:flex;align-items:center;gap:16px">
+            <dc-import name="Digital" size="{{ 56 }}" seed="leorib" aneis="{{ 4 }}" hint-size="56px,56px"></dc-import>
+            <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:3.5rem;line-height:1;color:#2B5633">leorib<span style="color:#9A4F33">.</span></span>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:32px">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><dc-import name="Digital" size="{{ 48 }}" seed="leorib" aneis="{{ 4 }}" hint-size="48px,48px"></dc-import><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">48</span></div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><dc-import name="Digital" size="{{ 32 }}" seed="leorib" aneis="{{ 3 }}" hint-size="32px,32px"></dc-import><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">32</span></div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:center"><dc-import name="Digital" size="{{ 16 }}" seed="leorib" aneis="{{ 2 }}" hint-size="16px,16px"></dc-import><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">16</span></div>
+          </div>
+          <span style="position:absolute;left:24px;bottom:20px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#22261F">Assinatura · tamanhos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px;font-family:'Atkinson Hyperlegible Next',sans-serif;color:#22261F;border-bottom:1px solid #B9B5AA">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:64ch">
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;letter-spacing:.08em;text-transform:uppercase">[ Rodada 7 ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:3.5rem;line-height:1.05">Modo <em style="font-style:italic">escuro</em></h1>
+    <p style="margin:0;font-size:1.25rem;line-height:1.6">A <a href="#6a">6a</a> continua como modo claro, já com as texturas de pedra e folha mais suaves. Aqui está a versão escura, com os mesmos papéis de cor.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#151A15"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Noite · fundo<br>#151A15</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#1E251E"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Carvão · superfícies<br>#1E251E</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#ECE8DC"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Papel · texto<br>#ECE8DC · 14.9:1</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#A9AD9F"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Névoa · secundário<br>#A9AD9F · 7.9:1</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#A9C98A"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Broto claro · ação<br>#A9C98A · 10:1</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#D08A68"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Argila clara · acento<br>#D08A68</span></div>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:96px;align-items:flex-start">
+  <div id="7a" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">7a</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Bancada à noite</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">A mesma bancada com a luz apagada: fundo verde-noite, texto em papel e o broto fazendo o papel de cor de ação, para manter o contraste.</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Novo: névoa musgo → papel no hero e no contato · horizonte de sálvia antes dos cases · pílulas e raios 12/16/28px · itálico de Fraunces em uma palavra por título</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Motion: o mesmo da 2a, mais o brilho do contato que sobe devagar</p>
+      </div>
+      <button type="button" onClick="{{ replay }}" style="min-height:48px;padding:0 20px;background:transparent;border:1.5px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#22261F;cursor:pointer;transition:background .25s" style-hover="background:#F3F0E6">Rever animações</button>
+    </div>
+
+    <div ref="{{ boardRef7 }}" data-screen-label="7a Bancada em névoa" style="position:relative;isolation:isolate;width:1280px;background:#151A15;color:#ECE8DC;font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;container-type:inline-size;overflow:hidden">
+      <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+        <div aria-hidden="true" style="position:absolute;inset:0;padding:0 64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;pointer-events:none;z-index:9">
+          <sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(154,79,51,.05);border-left:1px solid rgba(154,79,51,.3);border-right:1px solid rgba(154,79,51,.3)"></div></sc-for>
+        </div>
+      </sc-if>
+
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 64px">
+        <a href="#" style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.125rem;line-height:1;color:#A9C98A;text-decoration:none;letter-spacing:-.01em"><dc-import name="Digital" size="{{ 36 }}" seed="leorib" cor="#8DB06E" corSemente="#D08A68" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#D08A68">.</span></span></a>
+        <nav style="display:flex;gap:4px;padding:4px;border:1px solid #3A433A;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.06em;text-transform:uppercase">
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#ECE8DC;text-decoration:none;transition:background .3s" style-hover="background:#1F271F">Cases</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#ECE8DC;text-decoration:none;transition:background .3s" style-hover="background:#1F271F">Serviços</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#ECE8DC;text-decoration:none;transition:background .3s" style-hover="background:#1F271F">Sobre</a>
+        </nav>
+        <a href="#" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#A9C98A;color:#151A15;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#ECE8DC;color:#151A15"><span style="width:8px;height:8px;border-radius:50%;background:#2A3D2C"></span>Fale comigo</a>
+      </header>
+
+      <div data-reveal="" style="position:relative;margin:8px 24px 0;height:660px;border-radius:28px;overflow:hidden;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(180deg,#1B2A1D 0%,#22402A 42%,#2B5633 66%,#4F7A44 86%,#8DB06E 100%);color:#F3F0E6;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+        <div style="position:absolute;top:32px;left:40px;right:40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase">
+          <span style="grid-column:1 / span 3">[ Leonardo Ribeiro ]</span>
+          <span style="grid-column:5 / span 4">Soluções digitais</span>
+          <span style="grid-column:10 / span 3;justify-self:end">Pequenos negócios</span>
+        </div>
+        <h1 style="position:absolute;top:128px;left:calc(40px + (100% - 80px - 11 * 24px) / 12 * 4 + 4 * 24px);right:40px;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2.75rem,1.5rem + 4.4cqi,5.5rem);line-height:1.04;letter-spacing:-.02em">
+          <span data-reveal="" data-delay="200" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Planilhas,</span>
+          <span data-reveal="" data-delay="320" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">automações e sites</span>
+          <span data-reveal="" data-delay="440" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">para pequenos <em style="font-style:italic">negócios.</em></span>
+        </h1>
+        <span style="position:absolute;left:40px;top:136px;writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.2em;text-transform:uppercase">ateliê digital</span>
+        <div style="position:absolute;left:40px;right:40px;bottom:32px;display:flex;justify-content:space-between;align-items:center;gap:24px;color:#151A15">
+          <div style="display:flex;gap:8px">
+            <sc-for list="{{ pills }}" as="p" hint-placeholder-count="4"><span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid #151A15;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ p }}</span></sc-for>
+          </div>
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem">Role ↓</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:80px 64px 96px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:6px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">[ Sobre ]</p>
+        <div data-reveal="" style="grid-column:5 / span 7;display:flex;flex-direction:column;gap:32px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <p style="margin:0;font-size:clamp(1.25rem,1rem + .6cqi,1.5rem);line-height:1.55;max-width:38ch;text-wrap:pretty">Sou Leonardo Ribeiro. Construo ferramentas simples que tiram o trabalho repetitivo da rotina do seu negócio, no Excel que você já usa ou na web.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <a href="#" style="display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 28px;background:#A9C98A;color:#151A15;border-radius:999px;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#ECE8DC;color:#151A15">Ver cases <span aria-hidden="true">→</span></a>
+            <a href="#" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;border:1.5px solid #A9C98A;color:#A9C98A;border-radius:999px;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#2A3D2C;color:#ECE8DC">Pedir orçamento</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;height:320px;margin:0 64px">
+        <sc-for list="{{ faixas6 }}" as="f" hint-placeholder-count="5">
+          <div data-strip="" data-delay="{{ f.delay }}" style="position:relative;flex:1;border-radius:16px;overflow:hidden;background-color:{{ f.cor }};background-image:{{ f.tex }};color:{{ f.ink }};display:flex;flex-direction:column;justify-content:space-between;padding:20px;transition:flex .7s cubic-bezier(.2,.7,.2,1),clip-path 1s cubic-bezier(.2,.7,.2,1)" style-hover="flex:1.9">
+            <span style="align-self:flex-start;padding:4px 12px;background:{{ f.pill }};border:1px solid currentColor;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;letter-spacing:.06em">{{ f.n }} · {{ f.mat }}</span>
+            <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.75rem;line-height:1">{{ f.nome }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:24px;margin:16px 64px 0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F"><span>Da pedra à folha · a mesma ideia do símbolo</span><span>seixo → musgo → folha</span></div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:112px 64px 16px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">[ Serviços ]</p>
+        <p style="grid-column:5 / span 8;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F">Três formas de tirar o trabalho repetitivo da sua semana</p>
+      </div>
+      <sc-for list="{{ servicos6 }}" as="s" hint-placeholder-count="3">
+        <div style="margin:0 64px">
+          <div data-line="" style="height:1px;background:#3A433A;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+          <div data-reveal="" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:32px 0;align-items:center;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+            <div style="grid-column:1 / span 3;display:flex;align-items:center;gap:16px">
+              <span aria-hidden="true" style="width:56px;height:56px;border-radius:50%;background-color:{{ s.cor }};background-image:{{ s.tex }}"></span>
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F">{{ s.n }}</span>
+            </div>
+            <h3 style="grid-column:5 / span 3;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.625rem;line-height:1.2">{{ s.titulo }}</h3>
+            <p style="grid-column:8 / span 5;margin:0;max-width:44ch">{{ s.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="position:relative;height:480px;margin-top:96px;background-image:{{ tx.grao }},{{ tx.graoLuz }},linear-gradient(180deg,#151A15 0%,#1F3323 34%,#3E6B43 54%,#1F3323 76%,#151A15 100%)">
+        <div data-reveal="" style="position:absolute;left:calc(50% - 60px);top:calc(54% - 60px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)"><dc-import name="Digital" size="{{ 120 }}" seed="leorib" cor="#F3F0E6" corSemente="#D08A68" hint-size="120px,120px"></dc-import></div>
+        <div style="position:absolute;left:64px;right:64px;top:24px;display:flex;justify-content:space-between;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F">
+          <span style="display:flex;gap:24px"><span>02</span><span>Cases</span></span><span>Role para ver ↓</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 64px 64px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:12px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">[ Cases ]</p>
+        <h2 data-reveal="" style="grid-column:5 / span 7;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.5rem);line-height:1.1;letter-spacing:-.01em;text-wrap:balance;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Problemas reais, resolvidos com o que o negócio <em style="font-style:italic">já usa.</em></h2>
+      </div>
+
+      <sc-for list="{{ cases2 }}" as="c" hint-placeholder-count="3">
+        <div style="margin:0 64px">
+          <div data-line="" style="height:1px;background:#3A433A;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+          <article style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 0 80px">
+            <div data-reveal="" style="grid-column:1 / span 3;display:flex;flex-direction:column;gap:12px;align-items:flex-start;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F">Case {{ c.n }}</span>
+              <span style="font-weight:700">{{ c.cliente }}</span>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border:1px solid #8F9488;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#A9AD9F">{{ c.setor }}</span>
+                <span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;background:#2A3D2C;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#ECE8DC">{{ c.tipo }}</span>
+              </div>
+            </div>
+            <div data-reveal="" data-delay="100" style="grid-column:5 / span 4;display:flex;flex-direction:column;gap:24px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <h3 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:clamp(1.5rem,1rem + 1.2cqi,2.125rem);line-height:1.15;text-wrap:balance">{{ c.titulo }}</h3>
+              <dl style="margin:0;display:flex;flex-direction:column;gap:16px">
+                <div><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">Problema</dt><dd style="margin:4px 0 0">{{ c.problema }}</dd></div>
+                <div><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">Solução</dt><dd style="margin:4px 0 0">{{ c.solucao }}</dd></div>
+                <div style="background:#1F271F;border-radius:16px;padding:16px 20px"><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#A9AD9F">Resultado</dt><dd style="margin:4px 0 0;display:flex;flex-direction:column"><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.75rem;line-height:1.1;color:#A9C98A">{{ c.num }}</span><span>{{ c.resultado }}</span></dd></div>
+              </dl>
+              <a href="#" style="font-weight:500;color:#A9C98A;text-underline-offset:4px">Ler o case completo →</a>
+            </div>
+            <figure data-reveal="" data-delay="200" style="grid-column:9 / span 4;margin:0;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <div style="display:flex;flex-direction:column;gap:12px;transition:transform .5s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-4px)">
+                <div style="position:relative;border-radius:20px;overflow:hidden;background-color:#1F271F;background-image:{{ tx.linho }};padding:16px">
+                  <div style="position:relative;aspect-ratio:4 / 5;border-radius:10px;background:repeating-linear-gradient(135deg,#242C24 0 12px,#2B342B 12px 13px);box-shadow:0 1px 0 #3A433A,0 12px 24px -18px rgba(0,0,0,.6);display:grid;place-items:center;padding:16px">
+                    <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#A9AD9F;text-align:center">[ print · {{ c.print }} ]</span>
+                  </div>
+                </div>
+                <figcaption style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#A9AD9F">Fig. {{ c.n }} — {{ c.print }}</figcaption>
+              </div>
+            </figure>
+          </article>
+        </div>
+      </sc-for>
+
+      <div style="position:relative;isolation:isolate;overflow:hidden;margin:32px 24px 0;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(200deg,#2B5633 0%,#2B5633 60%,#3B6B43 100%);color:#F3F0E6;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:80px 40px">
+        <sc-if value="{{ orbes }}" hint-placeholder-val="{{ true }}">
+          <div aria-hidden="true" data-orb="" style="position:absolute;z-index:-1;right:-160px;top:-200px;width:720px;height:720px;pointer-events:none;background-image:{{ tx.graoLuz }},radial-gradient(circle,rgba(214,227,195,.75) 0,rgba(214,227,195,.35) 30%,rgba(214,227,195,0) 64%);-webkit-mask-image:radial-gradient(circle,#000 0 34%,transparent 66%);mask-image:radial-gradient(circle,#000 0 34%,transparent 66%);transition:opacity 2.2s cubic-bezier(.2,.7,.2,1),transform 2.2s cubic-bezier(.2,.7,.2,1)"></div>
+        </sc-if>
+        <div data-reveal="" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:24px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#D6E3C3">[ Contato ]</p>
+          <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.5rem);line-height:1.1;letter-spacing:-.01em;text-wrap:balance">Me conte o que toma tempo no seu <em style="font-style:italic">negócio.</em></h2>
+          <div style="display:flex;flex-direction:column;margin-top:24px;border-top:1px solid rgba(214,227,195,.5)">
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid rgba(214,227,195,.5);color:#F3F0E6;text-decoration:none;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;transition:padding .5s cubic-bezier(.2,.7,.2,1)" style-hover="padding-left:12px;color:#F3F0E6"><span>E-mail</span><span>oi@leorib.com.br ↗</span></a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid rgba(214,227,195,.5);color:#F3F0E6;text-decoration:none;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;transition:padding .5s cubic-bezier(.2,.7,.2,1)" style-hover="padding-left:12px;color:#F3F0E6"><span>WhatsApp</span><span>(11) 90000-0000 ↗</span></a>
+          </div>
+        </div>
+        <form style="grid-column:7 / span 6;background:#1E251E;color:#ECE8DC;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <p style="grid-column:1 / span 2;margin:0;max-width:44ch">Respondo em até um dia útil, com uma proposta clara e sem termos técnicos.</p>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">Seu nome<input type="text" style="min-height:52px;padding:12px 16px;font:inherit;font-weight:400;background:#151A15;color:#ECE8DC;border:1.5px solid #8F9488;border-radius:12px"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">E-mail ou WhatsApp<input type="text" style="min-height:52px;padding:12px 16px;font:inherit;font-weight:400;background:#151A15;color:#ECE8DC;border:1.5px solid #8F9488;border-radius:12px"></label>
+          <label style="grid-column:1 / span 2;display:flex;flex-direction:column;gap:8px;font-weight:500">O que você quer resolver?<textarea rows="4" style="padding:12px 16px;font:inherit;font-weight:400;line-height:1.6;background:#151A15;color:#ECE8DC;border:1.5px solid #8F9488;border-radius:12px;resize:vertical"></textarea></label>
+          <button type="button" style="justify-self:start;min-height:52px;padding:0 28px;background:#A9C98A;color:#151A15;border:0;border-radius:999px;font:inherit;font-weight:500;cursor:pointer;transition:background .25s" style-hover="background:#ECE8DC">Enviar mensagem →</button>
+        </form>
+      </div>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:32px 64px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#A9AD9F">
+        <span style="display:flex;align-items:center;gap:12px"><dc-import name="Digital" size="{{ 24 }}" seed="leorib" cor="#8DB06E" corSemente="#D08A68" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+        <span aria-hidden="true" style="display:flex;gap:6px"><sc-for list="{{ faixas6 }}" as="f" hint-placeholder-count="5"><span style="width:48px;height:20px;border-radius:999px;background-color:{{ f.cor }};background-image:{{ f.tex }}"></span></sc-for></span>
+        <a href="#" style="color:#A9AD9F">Voltar ao topo ↑</a>
+      </footer>
+    </div>
+  </div>
+
+  
+  </div>
+</section>
+
+
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px;font-family:'Atkinson Hyperlegible Next',sans-serif;color:#22261F;border-bottom:1px solid #B9B5AA">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:64ch">
+    <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;letter-spacing:.08em;text-transform:uppercase">[ Rodada 6 ]</p>
+    <h1 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:3.5rem;line-height:1.05">Um verde mais <em style="font-style:italic">vivo</em></h1>
+    <p style="margin:0;font-size:1.25rem;line-height:1.6">A home e o cartão de visitas com o verde de folha nova, mais saturado e ainda quente. Papel, gesso, tinta, grafite e argila não mudam. O verde-broto entra só em névoas, na folha do símbolo e em detalhes, nunca em texto. As categorias agora vão da pedra à folha, como o símbolo.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#3F4F3A"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Musgo · antes<br>#3F4F3A · 7.7:1</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#2B5633"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Folha · marca<br>#2B5633 · 7.4:1</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#5E8A4E"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Folha média<br>#5E8A4E · névoas</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#8DB06E"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Broto<br>#8DB06E · decorativo</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:150px"><span style="height:72px;border-radius:12px;background:#D6E3C3"></span><span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;line-height:1.4">Sálvia nova<br>#D6E3C3 · fundos</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:96px;align-items:flex-start">
+
+  <div id="6a" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">6a</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Bancada em névoa · verde vivo</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">A estrutura linear da 2a ganha superfícies macias: o verde se dissolve em papel como neblina, e os cantos arredondados deixam a bancada mais atual sem perder o calor.</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Novo: névoa musgo → papel no hero e no contato · horizonte de sálvia antes dos cases · pílulas e raios 12/16/28px · itálico de Fraunces em uma palavra por título</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Motion: o mesmo da 2a, mais o brilho do contato que sobe devagar</p>
+      </div>
+      <button type="button" onClick="{{ replay }}" style="min-height:48px;padding:0 20px;background:transparent;border:1.5px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#22261F;cursor:pointer;transition:background .25s" style-hover="background:#F3F0E6">Rever animações</button>
+    </div>
+
+    <div ref="{{ boardRef6 }}" data-screen-label="6a Bancada em névoa" style="position:relative;isolation:isolate;width:1280px;background:#F3F0E6;color:#22261F;font-family:'Atkinson Hyperlegible Next',sans-serif;font-size:1.125rem;line-height:1.6;container-type:inline-size;overflow:hidden">
+      <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+        <div aria-hidden="true" style="position:absolute;inset:0;padding:0 64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;pointer-events:none;z-index:9">
+          <sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(154,79,51,.05);border-left:1px solid rgba(154,79,51,.3);border-right:1px solid rgba(154,79,51,.3)"></div></sc-for>
+        </div>
+      </sc-if>
+
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 64px">
+        <a href="#" style="display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.125rem;line-height:1;color:#2B5633;text-decoration:none;letter-spacing:-.01em"><dc-import name="Digital" size="{{ 36 }}" seed="leorib" cor="#2B5633" hint-size="36px,36px"></dc-import><span>leorib<span style="color:#9A4F33">.</span></span></a>
+        <nav style="display:flex;gap:4px;padding:4px;border:1px solid #B9B5AA;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.06em;text-transform:uppercase">
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none;transition:background .3s" style-hover="background:#E6E2D6">Cases</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none;transition:background .3s" style-hover="background:#E6E2D6">Serviços</a>
+          <a href="#" style="display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;color:#22261F;text-decoration:none;transition:background .3s" style-hover="background:#E6E2D6">Sobre</a>
+        </nav>
+        <a href="#" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#2B5633;color:#F3F0E6;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#22261F;color:#F3F0E6"><span style="width:8px;height:8px;border-radius:50%;background:#D6E3C3"></span>Fale comigo</a>
+      </header>
+
+      <div data-reveal="" style="position:relative;margin:8px 24px 0;height:660px;border-radius:28px;overflow:hidden;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(180deg,#2B5633 0%,#2B5633 50%,#5E8A4E 68%,#C3D6A4 85%,#E6E2D6 100%);color:#F3F0E6;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+        <div style="position:absolute;top:32px;left:40px;right:40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase">
+          <span style="grid-column:1 / span 3">[ Leonardo Ribeiro ]</span>
+          <span style="grid-column:5 / span 4">Soluções digitais</span>
+          <span style="grid-column:10 / span 3;justify-self:end">Pequenos negócios</span>
+        </div>
+        <h1 style="position:absolute;top:128px;left:calc(40px + (100% - 80px - 11 * 24px) / 12 * 4 + 4 * 24px);right:40px;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2.75rem,1.5rem + 4.4cqi,5.5rem);line-height:1.04;letter-spacing:-.02em">
+          <span data-reveal="" data-delay="200" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Planilhas,</span>
+          <span data-reveal="" data-delay="320" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">automações e sites</span>
+          <span data-reveal="" data-delay="440" style="display:block;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">para pequenos <em style="font-style:italic">negócios.</em></span>
+        </h1>
+        <span style="position:absolute;left:40px;top:136px;writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.2em;text-transform:uppercase">ateliê digital</span>
+        <div style="position:absolute;left:40px;right:40px;bottom:32px;display:flex;justify-content:space-between;align-items:center;gap:24px;color:#22261F">
+          <div style="display:flex;gap:8px">
+            <sc-for list="{{ pills }}" as="p" hint-placeholder-count="4"><span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid #22261F;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem">{{ p }}</span></sc-for>
+          </div>
+          <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem">Role ↓</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:80px 64px 96px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:6px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Sobre ]</p>
+        <div data-reveal="" style="grid-column:5 / span 7;display:flex;flex-direction:column;gap:32px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <p style="margin:0;font-size:clamp(1.25rem,1rem + .6cqi,1.5rem);line-height:1.55;max-width:38ch;text-wrap:pretty">Sou Leonardo Ribeiro. Construo ferramentas simples que tiram o trabalho repetitivo da rotina do seu negócio, no Excel que você já usa ou na web.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <a href="#" style="display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 28px;background:#2B5633;color:#F3F0E6;border-radius:999px;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#22261F;color:#F3F0E6">Ver cases <span aria-hidden="true">→</span></a>
+            <a href="#" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;border:1.5px solid #2B5633;color:#2B5633;border-radius:999px;text-decoration:none;font-weight:500;transition:background .25s" style-hover="background:#D6E3C3;color:#22261F">Pedir orçamento</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;height:320px;margin:0 64px">
+        <sc-for list="{{ faixas6 }}" as="f" hint-placeholder-count="5">
+          <div data-strip="" data-delay="{{ f.delay }}" style="position:relative;flex:1;border-radius:16px;overflow:hidden;background-color:{{ f.cor }};background-image:{{ f.tex }};color:{{ f.ink }};display:flex;flex-direction:column;justify-content:space-between;padding:20px;transition:flex .7s cubic-bezier(.2,.7,.2,1),clip-path 1s cubic-bezier(.2,.7,.2,1)" style-hover="flex:1.9">
+            <span style="align-self:flex-start;padding:4px 12px;background:{{ f.pill }};border:1px solid currentColor;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;letter-spacing:.06em">{{ f.n }} · {{ f.mat }}</span>
+            <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.75rem;line-height:1">{{ f.nome }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:24px;margin:16px 64px 0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50"><span>Da pedra à folha · a mesma ideia do símbolo</span><span>seixo → musgo → folha</span></div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:112px 64px 16px">
+        <p style="grid-column:1 / span 3;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Serviços ]</p>
+        <p style="grid-column:5 / span 8;margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Três formas de tirar o trabalho repetitivo da sua semana</p>
+      </div>
+      <sc-for list="{{ servicos6 }}" as="s" hint-placeholder-count="3">
+        <div style="margin:0 64px">
+          <div data-line="" style="height:1px;background:#B9B5AA;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+          <div data-reveal="" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:32px 0;align-items:center;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+            <div style="grid-column:1 / span 3;display:flex;align-items:center;gap:16px">
+              <span aria-hidden="true" style="width:56px;height:56px;border-radius:50%;background-color:{{ s.cor }};background-image:{{ s.tex }}"></span>
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">{{ s.n }}</span>
+            </div>
+            <h3 style="grid-column:5 / span 3;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:1.625rem;line-height:1.2">{{ s.titulo }}</h3>
+            <p style="grid-column:8 / span 5;margin:0;max-width:44ch">{{ s.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="position:relative;height:480px;margin-top:96px;background-image:{{ tx.grao }},{{ tx.graoLuz }},linear-gradient(180deg,#F3F0E6 0%,#D6E3C3 34%,#8DB06E 54%,#D6E3C3 76%,#F3F0E6 100%)">
+        <div data-reveal="" style="position:absolute;left:calc(50% - 60px);top:calc(54% - 60px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)"><dc-import name="Digital" size="{{ 120 }}" seed="leorib" cor="#F3F0E6" corSemente="#D08A68" hint-size="120px,120px"></dc-import></div>
+        <div style="position:absolute;left:64px;right:64px;top:24px;display:flex;justify-content:space-between;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">
+          <span style="display:flex;gap:24px"><span>02</span><span>Cases</span></span><span>Role para ver ↓</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 64px 64px">
+        <p style="grid-column:1 / span 3;margin:0;padding-top:12px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">[ Cases ]</p>
+        <h2 data-reveal="" style="grid-column:5 / span 7;margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.5rem);line-height:1.1;letter-spacing:-.01em;text-wrap:balance;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">Problemas reais, resolvidos com o que o negócio <em style="font-style:italic">já usa.</em></h2>
+      </div>
+
+      <sc-for list="{{ cases2 }}" as="c" hint-placeholder-count="3">
+        <div style="margin:0 64px">
+          <div data-line="" style="height:1px;background:#B9B5AA;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)"></div>
+          <article style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:48px 0 80px">
+            <div data-reveal="" style="grid-column:1 / span 3;display:flex;flex-direction:column;gap:12px;align-items:flex-start;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">Case {{ c.n }}</span>
+              <span style="font-weight:700">{{ c.cliente }}</span>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border:1px solid #575A50;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#575A50">{{ c.setor }}</span>
+                <span style="display:inline-flex;align-items:center;min-height:32px;padding:0 12px;background:#D6E3C3;border-radius:999px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.8125rem;color:#22261F">{{ c.tipo }}</span>
+              </div>
+            </div>
+            <div data-reveal="" data-delay="100" style="grid-column:5 / span 4;display:flex;flex-direction:column;gap:24px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <h3 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:clamp(1.5rem,1rem + 1.2cqi,2.125rem);line-height:1.15;text-wrap:balance">{{ c.titulo }}</h3>
+              <dl style="margin:0;display:flex;flex-direction:column;gap:16px">
+                <div><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Problema</dt><dd style="margin:4px 0 0">{{ c.problema }}</dd></div>
+                <div><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Solução</dt><dd style="margin:4px 0 0">{{ c.solucao }}</dd></div>
+                <div style="background:#E6E2D6;border-radius:16px;padding:16px 20px"><dt style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:#575A50">Resultado</dt><dd style="margin:4px 0 0;display:flex;flex-direction:column"><span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.75rem;line-height:1.1;color:#2B5633">{{ c.num }}</span><span>{{ c.resultado }}</span></dd></div>
+              </dl>
+              <a href="#" style="font-weight:500;text-underline-offset:4px">Ler o case completo →</a>
+            </div>
+            <figure data-reveal="" data-delay="200" style="grid-column:9 / span 4;margin:0;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+              <div style="display:flex;flex-direction:column;gap:12px;transition:transform .5s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-4px)">
+                <div style="position:relative;border-radius:20px;overflow:hidden;background-color:#E6E2D6;background-image:{{ tx.linho }};padding:16px">
+                  <div style="position:relative;aspect-ratio:4 / 5;border-radius:10px;background:repeating-linear-gradient(135deg,#F3F0E6 0 12px,#ECE8DC 12px 13px);box-shadow:0 1px 0 #B9B5AA,0 12px 24px -18px rgba(34,38,31,.4);display:grid;place-items:center;padding:16px">
+                    <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50;text-align:center">[ print · {{ c.print }} ]</span>
+                  </div>
+                </div>
+                <figcaption style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.875rem;color:#575A50">Fig. {{ c.n }} — {{ c.print }}</figcaption>
+              </div>
+            </figure>
+          </article>
+        </div>
+      </sc-for>
+
+      <div style="position:relative;isolation:isolate;overflow:hidden;margin:32px 24px 0;border-radius:28px;background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(200deg,#2B5633 0%,#2B5633 60%,#3B6B43 100%);color:#F3F0E6;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:80px 40px">
+        <sc-if value="{{ orbes }}" hint-placeholder-val="{{ true }}">
+          <div aria-hidden="true" data-orb="" style="position:absolute;z-index:-1;right:-160px;top:-200px;width:720px;height:720px;pointer-events:none;background-image:{{ tx.graoLuz }},radial-gradient(circle,rgba(214,227,195,.75) 0,rgba(214,227,195,.35) 30%,rgba(214,227,195,0) 64%);-webkit-mask-image:radial-gradient(circle,#000 0 34%,transparent 66%);mask-image:radial-gradient(circle,#000 0 34%,transparent 66%);transition:opacity 2.2s cubic-bezier(.2,.7,.2,1),transform 2.2s cubic-bezier(.2,.7,.2,1)"></div>
+        </sc-if>
+        <div data-reveal="" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:24px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+          <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;color:#D6E3C3">[ Contato ]</p>
+          <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:400;font-size:clamp(2rem,1.2rem + 2.6cqi,3.5rem);line-height:1.1;letter-spacing:-.01em;text-wrap:balance">Me conte o que toma tempo no seu <em style="font-style:italic">negócio.</em></h2>
+          <div style="display:flex;flex-direction:column;margin-top:24px;border-top:1px solid rgba(214,227,195,.5)">
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid rgba(214,227,195,.5);color:#F3F0E6;text-decoration:none;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;transition:padding .5s cubic-bezier(.2,.7,.2,1)" style-hover="padding-left:12px;color:#F3F0E6"><span>E-mail</span><span>oi@leorib.com.br ↗</span></a>
+            <a href="#" style="display:flex;justify-content:space-between;align-items:center;min-height:64px;border-bottom:1px solid rgba(214,227,195,.5);color:#F3F0E6;text-decoration:none;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1rem;transition:padding .5s cubic-bezier(.2,.7,.2,1)" style-hover="padding-left:12px;color:#F3F0E6"><span>WhatsApp</span><span>(11) 90000-0000 ↗</span></a>
+          </div>
+        </div>
+        <form style="grid-column:7 / span 6;background:#F3F0E6;color:#22261F;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <p style="grid-column:1 / span 2;margin:0;max-width:44ch">Respondo em até um dia útil, com uma proposta clara e sem termos técnicos.</p>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">Seu nome<input type="text" style="min-height:52px;padding:12px 16px;font:inherit;font-weight:400;background:#F3F0E6;color:#22261F;border:1.5px solid #575A50;border-radius:12px"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-weight:500">E-mail ou WhatsApp<input type="text" style="min-height:52px;padding:12px 16px;font:inherit;font-weight:400;background:#F3F0E6;color:#22261F;border:1.5px solid #575A50;border-radius:12px"></label>
+          <label style="grid-column:1 / span 2;display:flex;flex-direction:column;gap:8px;font-weight:500">O que você quer resolver?<textarea rows="4" style="padding:12px 16px;font:inherit;font-weight:400;line-height:1.6;background:#F3F0E6;color:#22261F;border:1.5px solid #575A50;border-radius:12px;resize:vertical"></textarea></label>
+          <button type="button" style="justify-self:start;min-height:52px;padding:0 28px;background:#2B5633;color:#F3F0E6;border:0;border-radius:999px;font:inherit;font-weight:500;cursor:pointer;transition:background .25s" style-hover="background:#22261F">Enviar mensagem →</button>
+        </form>
+      </div>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:32px 64px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">
+        <span style="display:flex;align-items:center;gap:12px"><dc-import name="Digital" size="{{ 24 }}" seed="leorib" cor="#2B5633" hint-size="24px,24px"></dc-import>leorib © 2026</span>
+        <span aria-hidden="true" style="display:flex;gap:6px"><sc-for list="{{ faixas6 }}" as="f" hint-placeholder-count="5"><span style="width:48px;height:20px;border-radius:999px;background-color:{{ f.cor }};background-image:{{ f.tex }}"></span></sc-for></span>
+        <a href="#" style="color:#575A50">Voltar ao topo ↑</a>
+      </footer>
+    </div>
+  </div>
+
+  <div id="6b" style="width:1280px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+      <span style="font-family:'Atkinson Hyperlegible Mono',monospace;font-size:1.25rem;background:#22261F;color:#F3F0E6;padding:8px 16px;border-radius:999px">6b</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:2.5rem;line-height:1.1">Cartão de visitas</h2>
+        <p style="margin:0;font-size:1.25rem;line-height:1.6;max-width:62ch">A frente leva a névoa musgo → papel do hero, e o verso é papel com uma mancha de verde granulado, como tinta borrifada.</p>
+        <p style="margin:0;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#575A50">90 × 50 mm · papel pólen ou algodão 300 g · cantos 2 mm · menor texto 8 pt</p>
+      </div>
+    </div>
+
+    <div data-screen-label="6b Cartão de visitas" style="position:relative;width:1280px;height:820px;border-radius:28px;overflow:hidden;background-color:#B9B5AA;background-image:{{ tx.concreto }};display:flex;align-items:center;justify-content:center;gap:64px">
+      <div style="width:540px;height:300px;flex:none;border-radius:12px;overflow:hidden;position:relative;transform:rotate(-5deg) translateY(-40px);box-shadow:0 2px 0 rgba(34,38,31,.15),0 40px 60px -30px rgba(34,38,31,.55);background-image:{{ tx.graoLuz }},{{ tx.grao }},linear-gradient(165deg,#2B5633 0%,#2B5633 40%,#5E8A4E 64%,#C3D6A4 84%,#E6E2D6 100%);color:#F3F0E6">
+        <span style="position:absolute;left:32px;top:28px;display:flex;align-items:center;gap:14px;font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:56px;line-height:1;letter-spacing:-.01em"><dc-import name="Digital" size="{{ 48 }}" seed="leorib" cor="#F3F0E6" corSemente="#D08A68" hint-size="48px,48px"></dc-import><span>leorib<span style="color:#D6E3C3">.</span></span></span>
+        <span style="position:absolute;right:28px;top:34px;writing-mode:vertical-rl;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:13px;letter-spacing:.2em;text-transform:uppercase">ateliê digital</span>
+        <div style="position:absolute;left:32px;right:32px;bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:17px;color:#22261F">
+          <span>soluções digitais<br>para pequenos negócios</span><span>leorib.com.br</span>
+        </div>
+      </div>
+
+      <div style="width:540px;height:300px;flex:none;border-radius:12px;overflow:hidden;position:relative;transform:rotate(4deg) translateY(50px);box-shadow:0 2px 0 rgba(34,38,31,.15),0 40px 60px -30px rgba(34,38,31,.55);background-color:#F3F0E6;background-image:{{ tx.grao }};color:#22261F">
+        <div aria-hidden="true" style="position:absolute;right:-90px;top:-110px;width:340px;height:300px;background-image:{{ tx.graoForte }},radial-gradient(42% 38% at 48% 52%,rgba(43,86,51,.95) 0,rgba(43,86,51,.55) 45%,rgba(43,86,51,0) 100%),radial-gradient(26% 24% at 30% 72%,rgba(43,86,51,.7) 0,rgba(43,86,51,0) 100%);-webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent 100%);mask-image:radial-gradient(closest-side,#000 40%,transparent 100%)"></div>
+        <div aria-hidden="true" style="position:absolute;left:300px;bottom:-40px;width:120px;height:110px;background-image:{{ tx.graoForte }},radial-gradient(closest-side,rgba(43,86,51,.75),rgba(43,86,51,0));-webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);mask-image:radial-gradient(closest-side,#000 30%,transparent 100%)"></div>
+        <div style="position:absolute;left:32px;top:30px;display:flex;flex-direction:column;gap:4px">
+          <span style="font-family:Fraunces,serif;font-variation-settings:'SOFT' 100;font-weight:500;font-size:30px;line-height:1.1">Leonardo Ribeiro</span>
+          <span style="font-size:18px;color:#575A50">Planilhas, automações e sites</span>
+        </div>
+        <div style="position:absolute;left:32px;bottom:26px;display:grid;grid-template-columns:auto auto;column-gap:20px;row-gap:4px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:17px">
+          <span style="color:#575A50">[ e-mail ]</span><span>oi@leorib.com.br</span>
+          <span style="color:#575A50">[ whatsapp ]</span><span>(11) 90000-0000</span>
+          <span style="color:#575A50">[ site ]</span><span>leorib.com.br</span>
+        </div>
+      </div>
+      <span style="position:absolute;left:40px;bottom:32px;font-family:'Atkinson Hyperlegible Mono',monospace;font-size:.9375rem;color:#22261F">Frente · Verso — escala 6 px/mm</span>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Grade&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;orbes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Respiros&quot;}}">
+const GRAO = "url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27240%27 height=%27240%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.85%27 numOctaves=%273%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .2 0%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E')";
+const CONCRETO = "url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27400%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.045%27 numOctaves=%275%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .55 -.12%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E')";
+const LINHO = "url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27200%27 height=%27200%27%3E%3Cfilter id=%27a%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.012 .8%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .26 0%27/%3E%3C/filter%3E%3Cfilter id=%27b%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.8 .012%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .22 0%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23a)%27/%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23b)%27/%3E%3C/svg%3E')";
+
+const CASES = [
+  { n: '01', cliente: 'Padaria Grão Fino', setor: 'Alimentação', tipo: 'Planilha Excel', titulo: 'Estoque que avisa antes de faltar',
+    problema: 'Os insumos eram contados à mão no fim do dia, e a farinha acabava no meio da semana.',
+    solucao: 'Planilha de estoque que dá baixa pelas vendas e mostra um alerta quando é hora de repor.',
+    num: '6 h', resultado: 'a menos por semana em contagem e pedidos de última hora.', print: 'planilha de estoque' },
+  { n: '02', cliente: 'Auto Center Vila Nova', setor: 'Oficina mecânica', tipo: 'Automação Excel', titulo: 'Orçamento pronto em cinco minutos',
+    problema: 'Cada orçamento era montado do zero, consultando preços em cadernos diferentes.',
+    solucao: 'Gerador de orçamentos com catálogo de peças e mão de obra, que cria o PDF em um clique.',
+    num: '40 → 5 min', resultado: 'por orçamento, com preços sempre atualizados.', print: 'gerador de orçamentos' },
+  { n: '03', cliente: 'Floricultura Jardim Alto', setor: 'Varejo', tipo: 'Site', titulo: 'Catálogo online com pedido pelo WhatsApp',
+    problema: 'Clientes pediam fotos e preços um por um pelo celular, o dia inteiro.',
+    solucao: 'Site leve com catálogo e preços, e um botão que já abre o pedido no WhatsApp.',
+    num: '1 em 3', resultado: 'pedidos agora chega pelo site, com o produto já escolhido.', print: 'site da floricultura' },
+];
+
+const D = [.13, .15, .12], W = [.36, .28, .18];
+const tex = (w, layers) => {
+  const s = `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${w}'>` + layers.map((l, i) =>
+    `<filter id='f${i}'><feTurbulence type='fractalNoise' baseFrequency='${l.f}' numOctaves='${l.o}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${l.c[0]} 0 0 0 0 ${l.c[1]} 0 0 0 0 ${l.c[2]} 0 0 0 ${l.a}'/></filter><rect width='100%' height='100%' filter='url(#f${i})'/>`).join('') + `</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+};
+const TX = {
+  grao: tex(240, [{ f: '.85', o: 3, c: D, a: '.14 0' }]),
+  graoLuz: tex(240, [{ f: '.8', o: 3, c: [1, 1, 1], a: '.2 0' }]),
+  graoForte: tex(240, [{ f: '.85', o: 3, c: D, a: '.24 0' }]),
+  papiro: tex(320, [{ f: '.004 .12', o: 3, c: W, a: '.55 -.14' }, { f: '.9', o: 3, c: D, a: '.12 0' }]),
+  gesso: tex(400, [{ f: '.006', o: 3, c: D, a: '.3 -.08' }, { f: '.9', o: 2, c: D, a: '.1 0' }]),
+  concreto: tex(400, [{ f: '.035', o: 5, c: D, a: '.55 -.12' }, { f: '.5', o: 1, c: D, a: '-20 7.4' }]),
+  linho: tex(200, [{ f: '.012 .8', o: 2, c: D, a: '.26 0' }, { f: '.8 .012', o: 2, c: D, a: '.22 0' }]),
+};
+
+const svgUrl = s => `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+const SEIXO = svgUrl(`<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><defs><radialGradient id='g' cx='34%' cy='28%' r='75%'><stop offset='0' stop-color='#DCD7CB'/><stop offset='.6' stop-color='#C9C4B7'/><stop offset='1' stop-color='#B5B0A3'/></radialGradient><radialGradient id='h' cx='34%' cy='28%' r='75%'><stop offset='0' stop-color='#D2CEC1'/><stop offset='1' stop-color='#ABA79B'/></radialGradient><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .13 0'/></filter></defs><rect width='220' height='220' fill='#BEB9AC'/><g><ellipse cx='42' cy='38' rx='36' ry='26' transform='rotate(-14 42 38)' fill='url(#g)'/><ellipse cx='128' cy='30' rx='30' ry='22' transform='rotate(10 128 30)' fill='url(#h)'/><ellipse cx='192' cy='86' rx='26' ry='32' transform='rotate(-8 192 86)' fill='url(#g)'/><ellipse cx='84' cy='112' rx='40' ry='28' transform='rotate(18 84 112)' fill='url(#g)'/><ellipse cx='160' cy='162' rx='36' ry='25' transform='rotate(-20 160 162)' fill='url(#h)'/><ellipse cx='34' cy='184' rx='30' ry='22' transform='rotate(6 34 184)' fill='url(#g)'/><ellipse cx='100' cy='200' rx='22' ry='16' fill='url(#h)'/><ellipse cx='210' cy='212' rx='18' ry='14' fill='url(#g)'/></g><rect width='220' height='220' filter='url(#n)'/></svg>`);
+const NAT = {
+  seixo: SEIXO,
+  ardosia: tex(400, [{ f: '.003 .09', o: 4, c: D, a: '.34 -.1' }, { f: '.9', o: 2, c: D, a: '.12 0' }]),
+  musgo: tex(200, [{ f: '.55', o: 4, c: [.12, .26, .12], a: '.5 -.18' }, { f: '.9', o: 2, c: [.86, .93, .62], a: '.32 -.1' }]),
+  broto: tex(240, [{ f: '.02 .2', o: 3, c: [.17, .34, .2], a: '.2 -.05' }]) + ',repeating-linear-gradient(62deg,rgba(243,240,230,0) 0 26px,rgba(243,240,230,.28) 26px 27px)',
+  folha: TX.graoLuz + ',repeating-linear-gradient(58deg,rgba(214,227,195,0) 0 30px,rgba(214,227,195,.1) 30px 31px),radial-gradient(80% 60% at 70% 20%,rgba(141,176,110,.42),rgba(141,176,110,0) 70%)',
+};
+
+class Component extends DCLogic {
+  boardRef = React.createRef();
+  boardRef3 = React.createRef();
+  boardRef6 = React.createRef();
+  boardRef7 = React.createRef();
+  boardRef8 = React.createRef();
+  boardRef9 = React.createRef();
+  boardRef10 = React.createRef();
+  state = { tocando: false, prog: .34 };
+  componentDidMount() { this.arm(); this.tick = setInterval(() => { if (this.state.tocando) this.setState(s => ({ prog: s.prog >= 1 ? 0 : s.prog + .004 })); }, 400); }
+  toggleMusica = () => this.setState(s => ({ tocando: !s.tocando }));
+  eq() {
+    const on = this.state.tocando;
+    return React.createElement('span', { 'aria-hidden': true, style: { display: 'flex', alignItems: 'flex-end', gap: 3, height: 20 } },
+      [0, 1, 2, 3].map(i => React.createElement('span', { key: i, style: { width: 3, height: 20, borderRadius: 2, background: '#D6E3C3', transformOrigin: 'bottom', transform: on ? undefined : 'scaleY(.25)', animation: `eq ${0.8 + i * .17}s ease-in-out ${i * -.3}s infinite alternate`, animationPlayState: on ? 'running' : 'paused' } })));
+  }
+  componentDidUpdate(prev) { if (prev.motion !== this.props.motion) this.arm(); }
+  componentWillUnmount() { this.io && this.io.disconnect(); clearInterval(this.tick); }
+  arm = () => {
+    const roots = [this.boardRef.current, this.boardRef3.current, this.boardRef6.current, this.boardRef7.current, this.boardRef8.current, this.boardRef9.current, this.boardRef10.current].filter(Boolean);
+    if (!roots.length) return;
+    const root = roots[0];
+    this.io && this.io.disconnect();
+    const off = this.props.motion === false || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = roots.flatMap(r => [...r.querySelectorAll('[data-reveal],[data-line],[data-strip],[data-orb]')]);
+    const kind = el => el.hasAttribute('data-line') ? 'line' : el.hasAttribute('data-strip') ? 'strip' : 'reveal';
+    const hide = el => {
+      const k = kind(el);
+      if (el.hasAttribute('data-orb')) { el.style.opacity = '0'; el.style.transform = 'translateY(96px)'; }
+      else if (k === 'line') el.style.transform = 'scaleX(0)';
+      else if (k === 'strip') el.style.clipPath = 'inset(100% 0 0 0)';
+      else { el.style.opacity = '0'; el.style.transform = 'translateY(16px)'; }
+    };
+    const show = el => {
+      const k = kind(el), d = +(el.dataset.delay || 0);
+      el.style.transitionDelay = d + 'ms';
+      if (k === 'line') el.style.transform = 'scaleX(1)';
+      else if (k === 'strip') el.style.clipPath = 'inset(0 0 0 0)';
+      else { el.style.opacity = '1'; el.style.transform = 'none'; }
+      setTimeout(() => { el.style.transitionDelay = '0ms'; }, d + 1300);
+    };
+    els.forEach(el => {
+      if (el.dataset.tr === undefined) el.dataset.tr = el.style.transition;
+      el.style.transition = 'none';
+      if (off) { el.style.opacity = ''; el.style.transform = ''; el.style.clipPath = ''; } else hide(el);
+    });
+    void root.offsetHeight;
+    els.forEach(el => { el.style.transition = el.dataset.tr; });
+    if (off) return;
+    this.io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { show(e.target); this.io.unobserve(e.target); }
+    }), { threshold: 0.15 });
+    els.forEach(el => this.io.observe(el));
+  };
+  renderVals() {
+    return {
+      boardRef: this.boardRef,
+      boardRef3: this.boardRef3,
+      boardRef6: this.boardRef6,
+      boardRef7: this.boardRef7,
+      boardRef8: this.boardRef8,
+      boardRef9: this.boardRef9,
+      boardRef10: this.boardRef10,
+      kpis: [
+        { valor: '6 h', rotulo: 'economizadas por semana', antes: 'antes: 7 h', depois: 'depois: 1 h', pa: '100%', pd: '14%' },
+        { valor: '4 → 0', rotulo: 'faltas de insumo por mês', antes: 'antes: 4', depois: 'depois: 0', pa: '100%', pd: '2%' },
+        { valor: '45 → 10', rotulo: 'minutos na contagem diária', antes: 'antes: 45 min', depois: 'depois: 10 min', pa: '100%', pd: '22%' },
+      ],
+      criado: [
+        { n: '01', t: 'Estoque com baixa automática', d: 'Cada venda lançada desconta os insumos da receita.' },
+        { n: '02', t: 'Alerta de reposição', d: 'O item fica em destaque quando chega no mínimo definido.' },
+        { n: '03', t: 'Pedido pronto', d: 'Lista de compras por fornecedor, pronta para enviar.' },
+        { n: '04', t: 'Painel da semana', d: 'Consumo, perdas e gastos numa única tela.' },
+      ],
+      servPg: [
+        { n: '01', nome: 'Planilhas', mat: 'seixo', cor: '#B3AEA1', tex: NAT.seixo, ink: '#22261F', pill: 'rgba(243,240,230,.82)',
+          para: 'Para organizar o que hoje está no papel, no caderno ou espalhado em vários arquivos.',
+          resolve: ['Controle de estoque e de pedidos', 'Caixa e fluxo financeiro', 'Cadastro de clientes e agenda'],
+          recebe: ['Planilha pronta, já com os seus dados', 'Fórmulas e alertas automáticos', 'Guia rápido de uso'],
+          caso: 'Padaria Grão Fino', cta: 'Quero uma planilha' },
+        { n: '02', nome: 'Automações', mat: 'musgo', cor: '#8DB06E', tex: NAT.musgo, ink: '#22261F', pill: 'rgba(243,240,230,.82)',
+          para: 'Para as tarefas que se repetem toda semana e tomam horas da equipe.',
+          resolve: ['Orçamentos e PDFs em um clique', 'Relatórios que se montam sozinhos', 'Juntar dados sem copiar e colar'],
+          recebe: ['Automação no seu próprio arquivo', 'Um botão simples para rodar', 'Explicação do que ela faz'],
+          caso: 'Auto Center Vila Nova', cta: 'Quero automatizar' },
+        { n: '03', nome: 'Web', mat: 'folha', cor: '#2B5633', tex: NAT.folha, ink: '#F3F0E6', pill: 'rgba(43,86,51,.85)',
+          para: 'Para o seu negócio ser encontrado e atender clientes pela internet.',
+          resolve: ['Site de apresentação do negócio', 'Catálogo com pedido pelo WhatsApp', 'Páginas de agendamento ou cadastro'],
+          recebe: ['Site rápido, acessível e que funciona no celular', 'Textos e fotos organizados com você', 'Publicação no seu domínio'],
+          caso: 'Floricultura Jardim Alto', cta: 'Quero um site' },
+      ],
+      etapas: [
+        { n: '01', t: 'Conversa', d: 'Você me conta a rotina e o que está tomando tempo.' },
+        { n: '02', t: 'Proposta', d: 'Escopo, prazo e valor por escrito, sem letra miúda.' },
+        { n: '03', t: 'Construção', d: 'Eu construo e te mostro o andamento no caminho.' },
+        { n: '04', t: 'Entrega', d: 'Tudo funcionando, com explicação de como usar.' },
+      ],
+      tocando: this.state.tocando,
+      toggleMusica: this.toggleMusica,
+      playLabel: this.state.tocando ? 'Pausar' : 'Tocar',
+      playIcon: this.state.tocando ? '❚❚' : '▶',
+      progW: (this.state.prog * 100).toFixed(1) + '%',
+      tempo: (() => { const t = Math.round(this.state.prog * 214); return Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0'); })(),
+      eq: this.eq(),
+      digitais: [
+        { seed: 'Padaria Grão Fino', nome: 'Padaria Grão Fino' },
+        { seed: 'Auto Center Vila Nova', nome: 'Auto Center Vila Nova' },
+        { seed: 'Floricultura Jardim Alto', nome: 'Floricultura Jardim Alto' },
+      ],
+      caminho: [
+        { quando: '14 anos', texto: 'Primeiros cursos de marketing e projetos web.' },
+        { quando: 'Depois', texto: 'Estudos em design, sempre na mesma linha.' },
+        { quando: 'Hoje', texto: 'Planilhas, automações e os primeiros sites para pequenos negócios.' },
+        { quando: 'Agora', texto: 'Estudante de Web Design.' },
+      ],
+      faixas6: [
+        { n: '01', mat: 'seixo', nome: 'planilhas', cor: '#B3AEA1', tex: NAT.seixo, ink: '#22261F', pill: 'rgba(243,240,230,.82)', delay: 0 },
+        { n: '02', mat: 'musgo', nome: 'automações', cor: '#8DB06E', tex: NAT.musgo, ink: '#22261F', pill: 'rgba(243,240,230,.82)', delay: 120 },
+        { n: '03', mat: 'folha', nome: 'web', cor: '#2B5633', tex: NAT.folha, ink: '#F3F0E6', pill: 'rgba(43,86,51,.85)', delay: 240 },
+      ],
+      servicos6: [
+        { n: '01', titulo: 'Planilhas', texto: 'Estoque, caixa, agenda e clientes num lugar só, com fórmulas que fazem a conta por você.', cor: '#B3AEA1', tex: NAT.seixo },
+        { n: '02', titulo: 'Automações', texto: 'Relatórios, orçamentos e cadastros que se preenchem sozinhos. Menos copiar e colar.', cor: '#8DB06E', tex: NAT.musgo },
+        { n: '03', titulo: 'Web', texto: 'Sites e páginas simples para o seu cliente encontrar, pedir e agendar.', cor: '#2B5633', tex: NAT.folha },
+      ],
+      symCor6: `${TX.graoLuz},radial-gradient(130% 130% at 28% 22%,#5E8A4E 0,#2B5633 62%)`,
+      symFolha6: `${TX.graoLuz},linear-gradient(225deg,#E2EDC6 0,#8DB06E 42%,#2B5633 100%)`,
+      symCor: `${TX.graoLuz},radial-gradient(130% 130% at 28% 22%,#6F7D66 0,#3F4F3A 62%)`,
+      symFolha: `${TX.graoLuz},linear-gradient(225deg,#D3DCC8 0,#8E9A84 42%,#3F4F3A 100%)`,
+      pills: ['Excel', 'Automações', 'Sites', 'React'],
+      orbes: this.props.orbes ?? true,
+      replay: this.arm,
+      tx: TX,
+      faixas2: [
+        { n: '01', mat: 'concreto', nome: 'planilhas', cor: '#B9B5AA', tex: TX.concreto, ink: '#22261F', delay: 0 },
+        { n: '02', mat: 'gesso', nome: 'controles', cor: '#E6E2D6', tex: TX.gesso, ink: '#22261F', delay: 90 },
+        { n: '03', mat: 'papiro', nome: 'automações', cor: '#E9E2CF', tex: TX.papiro, ink: '#22261F', delay: 180 },
+        { n: '04', mat: 'linho', nome: 'sites', cor: '#D3DCC8', tex: TX.linho, ink: '#22261F', delay: 270 },
+        { n: '05', mat: 'musgo', nome: 'aplicações', cor: '#3F4F3A', tex: TX.graoForte, ink: '#F3F0E6', delay: 360 },
+      ],
+      servicos2: [
+        { n: '01', titulo: 'Planilhas e controles', texto: 'Estoque, caixa, agenda e clientes num lugar só, com fórmulas que fazem a conta por você.', cor: '#B9B5AA', tex: TX.concreto },
+        { n: '02', titulo: 'Automações em Excel', texto: 'Relatórios, orçamentos e cadastros que se preenchem sozinhos. Menos copiar e colar.', cor: '#E9E2CF', tex: TX.papiro },
+        { n: '03', titulo: 'Sites e aplicações', texto: 'Páginas e sistemas simples para o seu cliente encontrar, pedir e agendar.', cor: '#D3DCC8', tex: TX.linho },
+      ],
+      cases2: CASES,
+      showGrid: this.props.showGrid ?? false,
+      cols: Array.from({ length: 12 }, (_, i) => i),
+      servicos: [
+        { n: '01', titulo: 'Planilhas e controles', texto: 'Estoque, caixa, agenda e clientes num lugar só, com fórmulas que fazem a conta por você.' },
+        { n: '02', titulo: 'Automações em Excel', texto: 'Relatórios, orçamentos e cadastros que se preenchem sozinhos. Menos copiar e colar.' },
+        { n: '03', titulo: 'Sites e aplicações', texto: 'Páginas e sistemas simples para o seu cliente encontrar, pedir e agendar.' },
+      ],
+      cases: CASES,
+      cases1b: CASES.map((c, i) => ({ ...c, bg: i % 2 ? '#F3F0E6' : '#D3DCC8', mat: i % 2 ? '#E6E2D6' : '#F3F0E6', dir: i % 2 ? 'row-reverse' : 'row' })),
+      cases1c: CASES.map((c, i) => ({ ...c, offset: ['0px', '128px', '48px'][i] })),
+      faixas: [
+        { n: '01', nome: 'planilhas', cor: '#B9B5AA', tex: CONCRETO, ink: '#22261F' },
+        { n: '02', nome: 'controles', cor: '#E6E2D6', tex: GRAO, ink: '#22261F' },
+        { n: '03', nome: 'automações', cor: '#F3F0E6', tex: LINHO, ink: '#22261F' },
+        { n: '04', nome: 'sites', cor: '#D3DCC8', tex: GRAO, ink: '#22261F' },
+        { n: '05', nome: 'aplicações', cor: '#3F4F3A', tex: CONCRETO, ink: '#F3F0E6' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
