@@ -52,7 +52,7 @@
   --error: var(--argila);
   --hero-grad: linear-gradient(180deg, #2B5633 0%, #2B5633 50%, #5E8A4E 68%, #C3D6A4 85%, #E6E2D6 100%);
   --hero-foot-ink: #22261F;
-  --respiro-grad: linear-gradient(180deg, #F3F0E6 0%, #D6E3C3 34%, #8DB06E 54%, #D6E3C3 76%, #F3F0E6 100%);
+  --respiro-grad: linear-gradient(180deg, #D6E3C3 0%, #8DB06E 38%, #5E8A4E 54%, #8DB06E 70%, #D6E3C3 100%);
 
   /* texturas (preenchidas por js/site.js; "none" mantém o gradiente válido sem JS) */
   --tx-grao: none;
@@ -124,7 +124,7 @@
   --error: #D08A68;
   --hero-grad: linear-gradient(180deg, #1B2A1D 0%, #22402A 42%, #2B5633 66%, #4F7A44 86%, #8DB06E 100%);
   --hero-foot-ink: #151A15;
-  --respiro-grad: linear-gradient(180deg, #151A15 0%, #1F3323 34%, #3E6B43 54%, #1F3323 76%, #151A15 100%);
+  --respiro-grad: linear-gradient(180deg, #1F3323 0%, #2B5633 38%, #3E6B43 54%, #2B5633 70%, #1F3323 100%);
   color-scheme: dark;
   --lua: 1;
 }
@@ -168,7 +168,7 @@
     --error: #D08A68;
     --hero-grad: linear-gradient(180deg, #1B2A1D 0%, #22402A 42%, #2B5633 66%, #4F7A44 86%, #8DB06E 100%);
     --hero-foot-ink: #151A15;
-    --respiro-grad: linear-gradient(180deg, #151A15 0%, #1F3323 34%, #3E6B43 54%, #1F3323 76%, #151A15 100%);
+    --respiro-grad: linear-gradient(180deg, #1F3323 0%, #2B5633 38%, #3E6B43 54%, #2B5633 70%, #1F3323 100%);
     color-scheme: dark;
     --lua: 1;
   }
@@ -485,7 +485,7 @@ em { font-style: italic; }
 @media (hover: hover) and (min-width: 640px) { .faixa:hover { flex: 1.9; } }
 .faixas-legenda {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 16px;
-  font-family: var(--mono); font-size: .9375rem; color: var(--muted);
+  font-size: 1.125rem; line-height: 1.5; color: var(--muted);
 }
 @media (max-width: 639px) {
   .faixas { flex-direction: column; height: auto; }
@@ -493,7 +493,7 @@ em { font-style: italic; }
 }
 
 .sec-head { padding-block: 112px 16px; }
-.sec-head .note { font-family: var(--mono); font-size: .9375rem; color: var(--muted); }
+.sec-head .note { font-size: 1.125rem; line-height: 1.5; color: var(--muted); }
 
 .serv-row {
   display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px;
@@ -510,9 +510,18 @@ em { font-style: italic; }
   .serv-row p { flex: 1 1 100%; }
 }
 
+/* faixa de respiro: o fundo (gradiente + grão) fica num ::before com máscara, então ele inteiro, textura
+   inclusive, se dissolve na cor da página em cima e embaixo. A máscara usa transparência, não uma cor,
+   por isso funciona igual nos dois temas. Os 64px das pontas ficam lisos: é ali que mora o texto. */
 .respiro {
-  position: relative; height: 480px; margin-top: 96px;
+  position: relative; isolation: isolate; height: 480px; margin-top: 96px;
+  --nevoa-borda: 64px;
+}
+.respiro::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background-image: var(--tx-grao), var(--tx-grao-luz), var(--respiro-grad);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0 var(--nevoa-borda), rgba(0, 0, 0, .35) calc(var(--nevoa-borda) + 12%), #000 calc(var(--nevoa-borda) + 30%), #000 calc(100% - var(--nevoa-borda) - 30%), rgba(0, 0, 0, .35) calc(100% - var(--nevoa-borda) - 12%), transparent calc(100% - var(--nevoa-borda)) 100%);
+  mask-image: linear-gradient(180deg, transparent 0 var(--nevoa-borda), rgba(0, 0, 0, .35) calc(var(--nevoa-borda) + 12%), #000 calc(var(--nevoa-borda) + 30%), #000 calc(100% - var(--nevoa-borda) - 30%), rgba(0, 0, 0, .35) calc(100% - var(--nevoa-borda) - 12%), transparent calc(100% - var(--nevoa-borda)) 100%);
 }
 .respiro-top {
   position: absolute; inset: 24px var(--m) auto var(--m); gap: 16px;
@@ -560,13 +569,13 @@ em { font-style: italic; }
   background-color: var(--frame-bg); background-image: var(--tx-linho);
 }
 .frame-print {
-  aspect-ratio: 4 / 5; border-radius: 10px; padding: 16px;
+  aspect-ratio: 4 / 3; border-radius: 10px; padding: 16px;
   background: repeating-linear-gradient(135deg, var(--print-a) 0 12px, var(--print-b) 12px 13px);
   box-shadow: var(--print-shadow);
   display: grid; place-items: center; text-align: center;
   font-family: var(--mono); font-size: .875rem; color: var(--muted);
 }
-.frame-print.wide { aspect-ratio: 16 / 9; }
+.frame-print.wide { aspect-ratio: 16 / 10; }
 
 /* ---------- contato ---------- */
 
@@ -591,9 +600,12 @@ em { font-style: italic; }
 .contato-links a {
   display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px;
   border-bottom: 1px solid rgba(214, 227, 195, .5); color: #F3F0E6; text-decoration: none;
-  font-family: var(--mono); font-size: 1rem; transition: padding .5s var(--ease);
+  font-family: var(--mono); font-size: 1rem;
 }
-.contato-links a:hover { padding-left: 12px; color: #F3F0E6; }
+/* o rótulo desliza com transform (não mexe no layout); a linha de baixo fica parada */
+.contato-links a > span:first-child { transition: transform .5s var(--ease); }
+.contato-links a:hover > span:first-child { transform: translateX(12px); }
+.contato-links a:hover { color: #F3F0E6; }
 .contato :focus-visible { outline-color: #D6E3C3; }
 
 .form {
@@ -688,7 +700,7 @@ em { font-style: italic; }
   padding: 20px 24px; border-radius: 16px; background: var(--surface);
 }
 .invest .valor { font-family: var(--serif); font-variation-settings: 'SOFT' 100; font-weight: 500; font-size: 1.75rem; line-height: 1.2; }
-.invest .valor small { font-family: var(--mono); font-size: .875rem; color: var(--muted); margin-left: 12px; }
+.invest .valor small { display: block; white-space: nowrap; font-family: var(--mono); font-size: .875rem; line-height: 1.6; color: var(--muted); }
 .invest .acts { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
 @media (max-width: 1023px) {
   .servico { grid-template-columns: repeat(8, minmax(0, 1fr)); row-gap: 32px; }
@@ -913,7 +925,7 @@ em { font-style: italic; }
 .progresso span { width: 40px; }
 .progresso span:last-child { text-align: right; }
 .progresso .track { flex: 1; height: 4px; border-radius: 999px; background: rgba(214, 227, 195, .3); overflow: hidden; }
-.progresso .fill { height: 100%; width: 34%; background: #D6E3C3; border-radius: 999px; transition: width .4s linear; }
+.progresso .fill { height: 100%; width: 100%; background: #D6E3C3; border-radius: 999px; transform: scaleX(.34); transform-origin: left; transition: transform .4s linear; }
 .controles { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 16px; }
 .play {
   width: 56px; height: 56px; border-radius: 50%; border: 0; background: #F3F0E6; color: #2B5633;
@@ -940,6 +952,39 @@ em { font-style: italic; }
 .meio-tom .stack { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
 @media (max-width: 639px) { .meio-tom { min-height: 440px; } .meio-tom .grid { padding-top: 32px; } }
 
+/* ---------- mobile (≤639px): ritmo vertical ~1/3 menor, sempre em múltiplos de 8 ---------- */
+
+@media (max-width: 639px) {
+  .intro { padding-block: 56px 64px; }
+  .sec-head { padding-block: 72px 16px; }
+  .respiro { margin-top: 40px; --nevoa-borda: 48px; }
+  .cases-head { padding-block: 32px 40px; }
+  .case-row { padding-block: 24px 40px; }
+  .contato { margin-top: 24px; }
+  .page-head { padding-block: 32px 40px; }
+  .servico { padding-block: 24px 40px; }
+  .etapas-sec { padding-block: 32px 72px; }
+  .case-head { padding-block: 24px 32px; }
+  .contexto { padding-block: 40px 32px; }
+  .criado { padding-bottom: 64px; }
+  .historia { padding-block: 40px; }
+  .caminho-sec { padding-bottom: 40px; }
+  .trilha-sec { padding-block: 40px; }
+  .sobre-hero { padding-block: 24px 40px; }
+
+  /* contato: cartão verde mais estreito por dentro, para o formulário ganhar largura */
+  .contato { padding: 32px 8px 8px; row-gap: 32px; }
+  .contato-texto { padding-inline: 12px; }
+  .form { padding: 24px 16px; }
+
+  /* serviços: o card vira uma faixa baixa só com a pílula; o h2 logo abaixo já é o título */
+  .servico-card { min-height: 120px; }
+  .servico-card .nome { display: none; }
+
+  /* painel verde: os anéis descem para o canto de baixo, longe do label e do título */
+  .painel-folha .bg-mark { top: auto; right: -200px; bottom: -240px; }
+}
+
 /* marcas de fundo (digital grande) */
 .bg-mark svg { width: var(--s); height: var(--s); }
 @media (max-width: 639px) { .bg-mark svg { width: calc(var(--s) * .6); height: calc(var(--s) * .6); } }
@@ -961,6 +1006,13 @@ em { font-style: italic; }
 @media (prefers-reduced-motion: no-preference) and (max-width: 760px) {
   .js .caminho .trilho[data-line]:not(.in) { transform: scaleY(0); }
 }
+
+/* rede de segurança: se o js/site.js não rodar (erro, arquivo bloqueado), ele nunca marca .js-ok
+   e, depois de 3s, tudo o que estava escondido aparece. Conteúdo nunca depende de animação. */
+@media (prefers-reduced-motion: no-preference) {
+  .js:not(.js-ok) :is([data-reveal], [data-line], [data-strip], [data-orb]):not(.in) { animation: revela-seguranca .6s var(--ease) 3s forwards; }
+}
+@keyframes revela-seguranca { to { opacity: 1; transform: none; clip-path: inset(0 0 0 0); } }
 
 /* troca de tema (js/site.js). Conceito "Anéis": o tema novo nasce no botão e cresce em círculo.
    O JS anima o clip-path da camada nova; aqui só desligamos o crossfade padrão do navegador,

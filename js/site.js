@@ -32,22 +32,56 @@
   /* ---------- animações de entrada ---------- */
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const animated = document.querySelectorAll('[data-reveal],[data-line],[data-strip],[data-orb]');
+  const animated = [...document.querySelectorAll('[data-reveal],[data-line],[data-strip],[data-orb]')];
+  const revelar = el => {
+    if (el.classList.contains('in')) return;
+    const d = +(el.dataset.delay || 0);
+    if (d) {
+      el.style.transitionDelay = d + 'ms';
+      setTimeout(() => { el.style.transitionDelay = ''; }, d + 1500);
+    }
+    el.classList.add('in');
+  };
+  const revelarTudo = () => animated.forEach(el => el.classList.add('in'));
+
   if (reduced || !('IntersectionObserver' in window)) {
-    animated.forEach(el => el.classList.add('in'));
+    revelarTudo();
   } else {
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target, d = +(el.dataset.delay || 0);
-      if (d) {
-        el.style.transitionDelay = d + 'ms';
-        setTimeout(() => { el.style.transitionDelay = ''; }, d + 1500);
-      }
-      el.classList.add('in');
-      io.unobserve(el);
-    }), { threshold: 0.15 });
-    animated.forEach(el => io.observe(el));
+    try {
+      // [data-strip] começa recortado com clip-path: inset(100% ...). O Chrome desconta o clip-path do
+      // próprio alvo no IntersectionObserver, então a área visível dele é sempre 0 e ele nunca "entrava".
+      // Por isso observamos o pai (que não é recortado) e revelamos os filhos dele.
+      const alvos = new Map();
+      animated.forEach(el => {
+        const alvo = el.matches('[data-strip]') && el.parentElement ? el.parentElement : el;
+        if (!alvos.has(alvo)) alvos.set(alvo, []);
+        alvos.get(alvo).push(el);
+      });
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (!e.isIntersecting || e.intersectionRatio === 0) return;
+        alvos.get(e.target).forEach(revelar);
+        io.unobserve(e.target);
+      }), { threshold: 0.15 });
+      alvos.forEach((_, alvo) => io.observe(alvo));
+
+      // rede de segurança: se o observer não disparar para algum elemento (posição fora da tela na
+      // horizontal, elemento alto demais para o threshold etc.), revela quando ele estiver na altura da tela.
+      let pendente = false;
+      const varrer = () => {
+        pendente = false;
+        const resta = animated.filter(el => !el.classList.contains('in'));
+        resta.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight * .9 && r.bottom > 0) revelar(el); });
+        if (!resta.length) removeEventListener('scroll', aoRolar);
+      };
+      const aoRolar = () => { if (!pendente) { pendente = true; setTimeout(varrer, 250); } };
+      addEventListener('scroll', aoRolar, { passive: true });
+      addEventListener('load', () => setTimeout(varrer, 600));
+    } catch (_) {
+      revelarTudo();
+    }
   }
+  // avisa o CSS que o JS está funcionando; sem isso, o CSS revela tudo sozinho depois de alguns segundos
+  root.classList.add('js-ok');
 
   /* ---------- menu mobile ---------- */
 
@@ -166,7 +200,7 @@
     let prog = .34, timer = null;
     const render = () => {
       const t = Math.round(prog * total);
-      fill.style.width = (prog * 100).toFixed(1) + '%';
+      fill.style.transform = 'scaleX(' + prog.toFixed(3) + ')';
       tempo.textContent = Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0');
     };
     btn.addEventListener('click', () => {
