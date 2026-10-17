@@ -90,7 +90,7 @@ Escala: corpo `1.125rem` (18px), `line-height: 1.6`. `.lead` `clamp(1.25rem…1.
 
 ## Acessibilidade (regras obrigatórias)
 
-1. **Texto mínimo de 18px (1.125rem)** para conteúdo lido. Não reduzir o corpo. Exceção restrita a metadados não essenciais em fonte mono (labels, legendas, tags), nunca abaixo do que já existe (`.8125rem` é o piso atual) e nunca para informação que só aparece ali.
+1. **Texto mínimo de 18px (1.125rem)** para conteúdo lido. Não reduzir o corpo. Exceção restrita a metadados não essenciais em fonte mono (labels, legendas, tags), nunca abaixo do que já existe (`.875rem` é o piso atual) e nunca para informação que só aparece ali.
 2. **Contraste**: mínimo **AA** (4.5:1 texto normal, 3:1 texto grande e componentes de UI); buscar **AAA** (7:1) em texto corrido (`--ink` sobre `--bg` já atende). Verificar **os dois modos** (claro e escuro) ao criar ou alterar qualquer cor. `--concreto` nunca é cor de texto.
 3. **Foco visível**: `:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px }`. Nunca `outline: none` sem substituto equivalente. Em fundos verdes usar `outline-color: #D6E3C3` (já feito em `.contato`, `.painel-folha`, `.player`).
 4. **`prefers-reduced-motion`**: todo movimento novo deve estar dentro de `@media (prefers-reduced-motion: no-preference)` ou ser neutralizado no bloco `reduce`. Conteúdo **nunca** pode depender de animação para aparecer: o estado escondido (`[data-reveal]:not(.in)`) só vale com classe `.js` + `no-preference`. O `<leo-digital>` e o `site.js` já respeitam a preferência.
@@ -115,3 +115,14 @@ Formato: `tipo: descrição` — em português, minúsculas, imperativo/presente
 Exemplos: `feat: adiciona case 02 do auto center`, `fix: corrige foco do menu mobile`, `style: aumenta respiro entre seções`.
 
 Fluxo: `main` = versão publicada (deploy automático na Vercel). Trabalho em branches `feat/nome-da-tarefa`; um commit = uma mudança lógica. Não commitar sem pedido explícito.
+
+## Verificação
+
+- Depois de qualquer mudança visual, verificar com o Playwright em 375px, 768px e 1280px, nos modos claro e escuro.
+- Ao criar ou alterar cor, calcular o contraste e registrar no PR/commit.
+
+## Como trabalhar comigo
+
+- Sou estudante de Web Design e estou aprendendo HTML, CSS, JS e React: ao fazer uma mudança, explique em poucas linhas, em português, o que foi alterado e por quê.
+- Mudanças grandes: proponha um plano antes de editar.
+- Arquivos `.gitignore`, `.vercelignore` e `CLAUDE.local.md` existem na raiz; `CLAUDE.md`, `README.md` e `_design/` não vão para o site publicado.
