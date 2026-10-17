@@ -67,6 +67,64 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) setOpen(false); });
   }
 
+  /* ---------- tema claro/escuro ----------
+     Sem escolha salva, o CSS segue prefers-color-scheme. Ao clicar, a escolha vira data-theme no <html>
+     (e é salva). O tema salvo é aplicado por um <script> inline no <head> de cada página, antes do CSS.
+     A troca usa a View Transitions API: o navegador tira uma "foto" da tela antiga, aplicamos o tema novo
+     e revelamos a foto nova com um círculo (clip-path) que cresce a partir do botão, como um anel de tronco. */
+
+  const temaBtns = document.querySelectorAll('[data-theme-toggle]');
+  if (temaBtns.length) {
+    const escuroDoSistema = window.matchMedia('(prefers-color-scheme: dark)');
+    const menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const metasCor = document.querySelectorAll('meta[name="theme-color"]');
+    const temaAtual = () => root.dataset.theme || (escuroDoSistema.matches ? 'dark' : 'light');
+
+    // o texto do botão diz a ação, não o estado atual
+    const rotular = () => {
+      const txt = temaAtual() === 'dark' ? 'Mudar para modo claro' : 'Mudar para modo escuro';
+      temaBtns.forEach(b => { b.querySelector('.theme-label').textContent = txt; });
+    };
+
+    const aplicar = tema => {
+      root.dataset.theme = tema;
+      metasCor.forEach(m => m.setAttribute('content', tema === 'dark' ? '#151A15' : '#F3F0E6'));
+      try { localStorage.setItem('leorib-tema', tema); } catch (_) { /* armazenamento bloqueado: vale só nesta visita */ }
+      rotular();
+    };
+
+    rotular();
+    escuroDoSistema.addEventListener('change', rotular);
+
+    temaBtns.forEach(btn => btn.addEventListener('click', () => {
+      const proximo = temaAtual() === 'dark' ? 'light' : 'dark';
+
+      if (menosMovimento.matches) { aplicar(proximo); return; }
+
+      if (!document.startViewTransition) {
+        root.classList.add('tema-fade');
+        aplicar(proximo);
+        setTimeout(() => root.classList.remove('tema-fade'), 400);
+        return;
+      }
+
+      // centro do botão e raio até o canto mais distante da tela: o círculo termina cobrindo tudo
+      const r = btn.getBoundingClientRect();
+      const x = r.left + r.width / 2, y = r.top + r.height / 2;
+      const raio = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+      root.classList.add('tema-anel');
+      const troca = document.startViewTransition(() => aplicar(proximo));
+      troca.ready.then(() => {
+        root.animate(
+          { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${raio}px at ${x}px ${y}px)`] },
+          { duration: 700, easing: 'cubic-bezier(.2, .7, .2, 1)', pseudoElement: '::view-transition-new(root)', fill: 'forwards' }
+        );
+      }).catch(() => {});
+      troca.finished.catch(() => {}).finally(() => root.classList.remove('tema-anel'));
+    }));
+  }
+
   /* ---------- formulário de contato ----------
      Sem servidor: monta a mensagem e abre o app de e-mail da pessoa. */
 

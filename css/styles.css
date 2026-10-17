@@ -76,11 +76,61 @@
   /* motion */
   --ease: cubic-bezier(.2, .7, .2, 1);
 
+  /* ícone do botão de tema: 0 = sol, 1 = lua */
+  --lua: 0;
+
   color-scheme: light;
 }
 
+/* Tema escuro. O CSS não deixa um mesmo bloco servir a um seletor e a uma @media,
+   então os dois blocos abaixo precisam ter EXATAMENTE os mesmos valores:
+   1) escolha explícita do usuário (data-theme="dark", ver js/site.js);
+   2) sem escolha salva: segue o sistema, a não ser que o usuário tenha escolhido o claro. */
+:root[data-theme="dark"] {
+  --bg: #151A15;
+  --surface: #1E251E;
+  --ink: #ECE8DC;
+  --muted: #A9AD9F;
+  --line: #3A433A;
+  --line-strong: #8F9488;
+  --brand: #A9C98A;
+  --accent: #D08A68;
+  --action: #A9C98A;
+  --on-action: #151A15;
+  --action-hover: #ECE8DC;
+  --on-action-hover: #151A15;
+  --secondary-hover-bg: #2A3D2C;
+  --secondary-hover-ink: #ECE8DC;
+  --nav-hover: #1F271F;
+  --nav-current-bg: #ECE8DC;
+  --nav-current-ink: #151A15;
+  --tag-bg: #2A3D2C;
+  --tag-ink: #ECE8DC;
+  --tag-border: #8F9488;
+  --result-bg: #1F271F;
+  --result-num: #A9C98A;
+  --field-bg: #151A15;
+  --field-border: #8F9488;
+  --form-bg: #1E251E;
+  --form-ink: #ECE8DC;
+  --frame-bg: #1F271F;
+  --print-a: #242C24;
+  --print-b: #2B342B;
+  --print-shadow: 0 1px 0 #3A433A, 0 12px 24px -18px rgba(0, 0, 0, .6);
+  --logo: #8DB06E;
+  --logo-seed: #D08A68;
+  --btn-dot: #2A3D2C;
+  --focus: #A9C98A;
+  --error: #D08A68;
+  --hero-grad: linear-gradient(180deg, #1B2A1D 0%, #22402A 42%, #2B5633 66%, #4F7A44 86%, #8DB06E 100%);
+  --hero-foot-ink: #151A15;
+  --respiro-grad: linear-gradient(180deg, #151A15 0%, #1F3323 34%, #3E6B43 54%, #1F3323 76%, #151A15 100%);
+  color-scheme: dark;
+  --lua: 1;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #151A15;
     --surface: #1E251E;
     --ink: #ECE8DC;
@@ -120,6 +170,7 @@
     --hero-foot-ink: #151A15;
     --respiro-grad: linear-gradient(180deg, #151A15 0%, #1F3323 34%, #3E6B43 54%, #1F3323 76%, #151A15 100%);
     color-scheme: dark;
+    --lua: 1;
   }
 }
 
@@ -271,6 +322,29 @@ em { font-style: italic; }
 
 .btn-header { min-height: 48px; padding: 0 24px; gap: 10px; }
 .btn-header .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--btn-dot); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+
+/* botão de tema: só aparece com JS (sem JS ele não faria nada) */
+.theme-toggle {
+  display: none; align-items: center; justify-content: center; gap: 12px;
+  min-width: 48px; min-height: 48px; padding: 0 12px;
+  border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink);
+  font: inherit; cursor: pointer;
+  transition: background .3s var(--ease);
+}
+.js .theme-toggle { display: inline-flex; }
+.theme-toggle:hover { background: var(--nav-hover); }
+
+/* ícone sol → lua. --lua vale 0 no tema claro e 1 no escuro (ver tokens), então o
+   ícone acompanha o tema sozinho, inclusive quando o tema vem do sistema. */
+.theme-icon { width: 24px; height: 24px; flex: none; }
+.theme-icon .sol, .theme-icon .corte, .theme-icon .raios {
+  transform-box: view-box; transform-origin: 12px 12px;
+  transition: transform .4s var(--ease), opacity .4s var(--ease);
+}
+.theme-icon .sol { transform: scale(calc(1 + .8 * var(--lua))); }
+.theme-icon .corte { transform: translate(calc(20px - 15px * var(--lua)), calc(-20px + 16px * var(--lua))); }
+.theme-icon .raios { opacity: calc(1 - var(--lua)); transform: rotate(calc(45deg * var(--lua))) scale(calc(1 - .6 * var(--lua))); }
 
 .menu-btn {
   display: none; align-items: center; min-height: 44px; padding: 0 16px;
@@ -280,7 +354,7 @@ em { font-style: italic; }
 
 @media (max-width: 860px) {
   .site-header { padding-block: 16px; }
-  .site-header .nav-pill, .site-header .btn-header { display: none; }
+  .site-header .nav-pill, .site-header .header-actions { display: none; }
   .menu-btn { display: inline-flex; }
   .brand { font-size: 1.75rem; gap: 10px; }
 }
@@ -306,6 +380,12 @@ em { font-style: italic; }
   color: #F3F0E6; text-decoration: none;
 }
 .mobile-menu .btn-light { margin-top: 20px; align-self: flex-start; }
+.mobile-menu .theme-toggle {
+  margin-top: 12px; align-self: flex-start; padding: 0 20px 0 14px;
+  border-color: rgba(214, 227, 195, .5); color: #F3F0E6;
+}
+.mobile-menu .theme-toggle:hover { background: rgba(214, 227, 195, .15); }
+.mobile-menu :focus-visible { outline-color: #D6E3C3; }
 
 /* ---------- etiquetas ---------- */
 
@@ -880,6 +960,20 @@ em { font-style: italic; }
 }
 @media (prefers-reduced-motion: no-preference) and (max-width: 760px) {
   .js .caminho .trilho[data-line]:not(.in) { transform: scaleY(0); }
+}
+
+/* troca de tema (js/site.js). Conceito "Anéis": o tema novo nasce no botão e cresce em círculo.
+   O JS anima o clip-path da camada nova; aqui só desligamos o crossfade padrão do navegador,
+   para as duas camadas ficarem paradas e a única coisa que se move ser o círculo. */
+@media (prefers-reduced-motion: no-preference) {
+  .tema-anel::view-transition-old(root),
+  .tema-anel::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+}
+
+/* plano B (sem View Transitions): só suaviza as cores por ~300ms. Classe temporária, nunca no carregamento. */
+.tema-fade,
+.tema-fade :where(*:not(svg *, [data-reveal], [data-strip], [data-line])) {
+  transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
 }
 
 @media (prefers-reduced-motion: reduce) {

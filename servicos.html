@@ -7,6 +7,7 @@
 <meta name="description" content="Planilhas, automações e web: para quem é, o que resolve e o que você recebe em cada serviço da leorib.">
 <meta name="theme-color" content="#F3F0E6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#151A15" media="(prefers-color-scheme: dark)">
+<script>/* tema: aplica a escolha salva antes do CSS, para não piscar o tema errado */(function(){var t=null;try{t=localStorage.getItem('leorib-tema')}catch(e){}if(t!=='light'&&t!=='dark')return;document.documentElement.setAttribute('data-theme',t);var c=t==='dark'?'#151A15':'#F3F0E6';document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',c)})})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
@@ -25,7 +26,10 @@
     <a href="servicos.html" aria-current="page">Serviços</a>
     <a href="sobre.html">Sobre</a>
   </nav>
-  <a class="btn btn-primary btn-header" href="index.html#contato"><span class="dot" aria-hidden="true"></span>Fale comigo</a>
+  <div class="header-actions">
+    <button class="theme-toggle" type="button" data-theme-toggle><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><mask id="tema-mascara-h" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#fff"/><circle class="corte" cx="12" cy="12" r="7" fill="#000"/></mask></defs><g mask="url(#tema-mascara-h)"><circle class="sol" cx="12" cy="12" r="5" fill="currentColor"/></g><g class="raios" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></svg><span class="theme-label sr-only">Mudar para modo escuro</span></button>
+    <a class="btn btn-primary btn-header" href="index.html#contato"><span class="dot" aria-hidden="true"></span>Fale comigo</a>
+  </div>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
 </header>
 
@@ -40,6 +44,7 @@
     <a href="sobre.html">Sobre</a>
   </nav>
   <a class="btn btn-light" href="index.html#contato">Fale comigo</a>
+  <button class="theme-toggle" type="button" data-theme-toggle><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><mask id="tema-mascara-m" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#fff"/><circle class="corte" cx="12" cy="12" r="7" fill="#000"/></mask></defs><g mask="url(#tema-mascara-m)"><circle class="sol" cx="12" cy="12" r="5" fill="currentColor"/></g><g class="raios" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></svg><span class="theme-label">Mudar para modo escuro</span></button>
 </div>
 
 <main id="conteudo">
