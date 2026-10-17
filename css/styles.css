@@ -403,9 +403,14 @@ em { font-style: italic; }
 
 /* ---------- materiais (seixo → musgo → folha) ---------- */
 
-.mat-seixo { background-color: #B3AEA1; background-image: var(--nat-seixo); color: #22261F; --pill: rgba(243, 240, 230, .82); }
-.mat-musgo { background-color: #8DB06E; background-image: var(--nat-musgo); color: #22261F; --pill: rgba(243, 240, 230, .82); }
-.mat-folha { background-color: #2B5633; background-image: var(--nat-folha); color: #F3F0E6; --pill: rgba(43, 86, 51, .85); }
+/* materiais são superfícies fixas (iguais nos dois temas): a cor do texto vale também no hover,
+   senão o a:hover global (var(--ink), que é claro no escuro) apaga o texto e a pílula */
+.mat-seixo, .mat-seixo:hover { color: #22261F; }
+.mat-musgo, .mat-musgo:hover { color: #22261F; }
+.mat-folha, .mat-folha:hover { color: #F3F0E6; }
+.mat-seixo { background-color: #B3AEA1; background-image: var(--nat-seixo); --pill: rgba(243, 240, 230, .82); }
+.mat-musgo { background-color: #8DB06E; background-image: var(--nat-musgo); --pill: rgba(243, 240, 230, .82); }
+.mat-folha { background-color: #2B5633; background-image: var(--nat-folha); --pill: rgba(43, 86, 51, .85); }
 .mat-pill {
   align-self: flex-start; padding: 4px 12px; border-radius: 999px; background: var(--pill);
   font-family: var(--mono); font-size: .8125rem; letter-spacing: .06em; white-space: nowrap;
@@ -668,7 +673,7 @@ em { font-style: italic; }
   min-height: 112px; padding: 16px 20px 20px; border-radius: 16px; text-decoration: none;
   transition: clip-path 1s var(--ease), transform .4s var(--ease);
 }
-.serv-nav a:hover { transform: translateY(-3px); color: inherit; }
+.serv-nav a:hover { transform: translateY(-3px); }
 .serv-nav .mat-pill { font-size: .875rem; letter-spacing: 0; }
 .serv-nav .nome { font-family: var(--serif); font-variation-settings: 'SOFT' 100; font-weight: 500; font-size: 1.5rem; line-height: 1; white-space: nowrap; }
 @media (max-width: 639px) { .serv-nav { grid-template-columns: 1fr; } .serv-nav a { min-height: 96px; } }
@@ -784,7 +789,7 @@ em { font-style: italic; }
   margin-bottom: 24px; padding: 32px 40px; border-radius: 28px; text-decoration: none;
   transition: transform .4s var(--ease);
 }
-.proximo:hover { transform: translateY(-4px); color: #22261F; }
+.proximo:hover { transform: translateY(-4px); }
 .proximo .mat-pill { grid-column: 1 / span 3; justify-self: start; font-size: .875rem; letter-spacing: 0; }
 .proximo .card { grid-column: 4 / span 7; display: flex; flex-direction: column; gap: 4px; padding: 8px 20px; border-radius: 16px; background: rgba(243, 240, 230, .82); }
 .proximo .card .t { font-family: var(--serif); font-variation-settings: 'SOFT' 100; font-weight: 500; font-size: 2rem; line-height: 1.15; }
